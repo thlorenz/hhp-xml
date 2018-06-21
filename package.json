@@ -4,7 +4,7 @@
   "description": "Poker HandHistory Parser for XML formatted histories.",
   "main": "hhp-xml.js",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "set -e; for t in test/*.js; do node $t; done"
   },
   "repository": {
     "type": "git",

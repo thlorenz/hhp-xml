@@ -21,14 +21,21 @@ function removeControlChars(s) {
 
 function remove(line) {
   const trimmed = line.trim()
-  return trimmed.length === 0 || /<\?xml.+version.+\?>/.test(trimmed)
+  return trimmed.length === 0
+}
+
+function removeXMLHeader(line) {
+  return line.replace(/<\?xml.+version.+\?>/, '')
 }
 
 function removeXmlHeader(s) {
   const lines = s.split('\n')
   let idx = 0
   while (remove(lines[idx++]));
-  return lines.slice(idx - 1).join('\n')
+
+  const trimmedLines = lines.slice(idx - 1)
+  trimmedLines[0] = removeXMLHeader(trimmedLines[0])
+  return trimmedLines.join('\n')
 }
 
 function getGeneralMap(general) {
@@ -71,8 +78,9 @@ module.exports = { parseHands }
 // Test
 if (!module.parent && typeof window === 'undefined') {
   const fs = require('fs')
-  const xml = fs.readFileSync(`${__dirname}/test/fixtures/iPoker/cash.multi-hands.xml`, 'utf8')
+  const xml = fs.readFileSync(`${__dirname}/test/fixtures/iPoker/tourney.mtt-freeroll.xml`, 'utf8')
   const hands = parseHands(xml)
-
-  console.log(JSON.stringify(hands, null, 2))
+  const h = hands[0]
+  console.log({ info: h.info, table: h.table })
+  // console.log(JSON.stringify(hands, null, 2))
 }

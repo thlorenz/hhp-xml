@@ -1,6 +1,6 @@
 'use strict'
 
-const file = 'cash.usd.players-showed'
+const file = require('./util/guess-fixture-name')(__filename)
 
 const test = require('tape')
 const processFile = require('./util/process-ipoker')
@@ -23,12 +23,17 @@ test(`ipoker: ${file}`, function(t) {
       , { seatno: 9, player: 'Player7', chips: 6.14 }
       , { seatno: 10, player: 'Player2', chips: 19.8 } ]
     , info:
-      { pokertype: 'holdem'
+      { room: 'ipoker'
+      , timezone: null
+      , pokertype: 'holdem'
       , limit: 'nolimit'
       , currency: '$'
+      , donation: null
+      , rake: null
+      , buyin: null
       , sb: 0.1
       , bb: 0.2
-      , ante: null
+      , ante: 0
       , year: 2011
       , month: 12
       , day: 2
@@ -38,8 +43,7 @@ test(`ipoker: ${file}`, function(t) {
       , hero: 'Player3'
       , handid: '3056022611'
       , gameno: '3056022611'
-      , room: 'ipoker'
-      , timezone: null }
+      , gametype: 'cash' }
     , table:
       { tablename: 'Memphis'
       , tableno: 98641631
@@ -77,6 +81,5 @@ test(`ipoker: ${file}`, function(t) {
     , summary: [ { type: 'pot', single: true, amount: 1.33 } ]
     , hero: 'Player3'
     , holecards: { card1: '6h', card2: '7h' } })
-
   t.end()
 })

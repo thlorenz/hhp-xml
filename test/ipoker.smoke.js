@@ -4,13 +4,17 @@ const test = require('tape')
 const ocat = require('ocat').applyRes5Opts()
 const processFile = require('./util/process-ipoker')
 const hha = require('hha')
+const fs = require('fs')
 
-const PRINT = null // 'cash.usd.players-showed'
+const PRINT = null // 'cash.fpdb.LHE-10max-USD-0.10-0.20-201107.player.sitting.out'
+
+const files = fs.readdirSync(__dirname)
+  .filter(x => x !== 'ipoker.smoke.js')
+  .filter(x => x.startsWith('ipoker'))
+  .map(x => x.slice('ipoker.'.length, -3))
 
 test('\nipoker: parsing + analyzing', function(t) {
-  [ 'cash.pounds.no-hero'
-  , 'cash.usd.players-showed'
-  ].forEach(run)
+  files.forEach(run)
 
   function run(file) {
     t.comment(`+++ ${file} +++`)
@@ -18,7 +22,7 @@ test('\nipoker: parsing + analyzing', function(t) {
     const analyzeds = res.map(hha)
     for (const x of analyzeds) t.ok(x != null, 'analyzed non null')
     if (PRINT === file) {
-      ocat.log({ file, analyzeds })
+      ocat.log({ file, analyzeds, res })
     }
   }
 

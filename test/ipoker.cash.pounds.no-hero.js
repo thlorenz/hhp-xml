@@ -1,6 +1,6 @@
 'use strict'
 
-const file = 'cash.pounds.no-hero'
+const file = require('./util/guess-fixture-name')(__filename)
 
 const test = require('tape')
 const processFile = require('./util/process-ipoker')
@@ -16,11 +16,17 @@ test(`ipoker: ${file}`, function(t) {
       , { seatno: 5, player: 'keepfishing68', chips: 9.3 }
       , { seatno: 6, player: 'chcake515151', chips: 9.08 } ]
     , info:
-      { pokertype: 'holdem'
+      { room: 'ipoker'
+      , timezone: null
+      , pokertype: 'holdem'
       , limit: 'nolimit'
       , currency: '£'
+      , donation: null
+      , rake: null
+      , buyin: null
       , sb: 0.05
-      , bb: 0.10
+      , bb: 0.1
+      , ante: 0.02
       , year: 2014
       , month: 1
       , day: 6
@@ -30,8 +36,7 @@ test(`ipoker: ${file}`, function(t) {
       , hero: null
       , handid: '5384038435'
       , gameno: '5384038435'
-      , room: 'ipoker'
-      , timezone: null }
+      , gametype: 'cash' }
     , table:
       { tablename: 'Albuixech'
       , tableno: 817196375
@@ -58,6 +63,8 @@ test(`ipoker: ${file}`, function(t) {
       [ { player: 'WWR141388412', type: 'bet', amount: 0.1 }
       , { player: 'keepfishing68', type: 'fold' } ]
     , showdown: [ { player: 'WWR141388412', type: 'collect', amount: 0.35 } ]
-    , summary: [ { type: 'pot', single: true, amount: 0.35 } ] })
+    , summary: [ { type: 'pot', single: true, amount: 0.35 } ]
+    , hero: null
+    , holecards: null })
   t.end()
 })
