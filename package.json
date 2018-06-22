@@ -12,12 +12,12 @@
   },
   "homepage": "https://github.com/thlorenz/hhp-xml",
   "dependencies": {
-    "ocat": "~0.2.1",
-    "spok": "~0.9.1",
     "xml-js": "~1.6.4"
   },
   "devDependencies": {
     "hha": "~0.7.1",
+    "ocat": "~0.2.1",
+    "spok": "~0.9.1",
     "tape": "~4.8.0"
   },
   "keywords": [],
