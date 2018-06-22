@@ -56,8 +56,32 @@ function extractSession(hands) {
   return { general: generalMap, games }
 }
 
-// Treat all histories as multiple hands since each file only has one <general> section
+/**
+ * Determines if any of the parsers can parse the passed XML hand.
+ *
+ * @name canParse
+ * @param {String} xml to parse
+ * @returns {Boolean} `true` if it knows how to parse this xml
+ */
+function canParse(xml) {
+  return (/<session sessioncode="/i).test(xml)
+}
+
+/**
+ * Parses hands for Poker rooms that save them in xml format.
+ * Currently only iPoker is supported.
+ *
+ * The structure of the returned hand objects is the same as for
+ * [hhp](https://github.com/thlorenz/hhp).
+ *
+ * @name parseHands
+ * @param {String} xml to parse
+ * @returns {Array.<Object>|null} parsed hands or `null` if it cannot parse any hands
+ */
 function parseHands(xml) {
+  if (!canParse(xml)) return null
+
+  // Treat all histories as multiple hands since each file only has one <general> section
   const essentialXml = removeXmlHeader(xml)
   const fixedXml = removeControlChars(essentialXml)
   const hands = xmljs.xml2js(fixedXml, { trim: true })
@@ -73,14 +97,4 @@ function parseHands(xml) {
   return parsedHands
 }
 
-module.exports = { parseHands }
-
-// Test
-if (!module.parent && typeof window === 'undefined') {
-  const fs = require('fs')
-  const xml = fs.readFileSync(`${__dirname}/test/fixtures/iPoker/tourney.mtt-freeroll.xml`, 'utf8')
-  const hands = parseHands(xml)
-  const h = hands[0]
-  console.log({ info: h.info, table: h.table })
-  // console.log(JSON.stringify(hands, null, 2))
-}
+module.exports = { parseHands, canParse }
