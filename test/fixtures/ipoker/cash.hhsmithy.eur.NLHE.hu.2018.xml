@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="0">
+  <general>
+    <client_version>17.5.6.7</client_version>
+    <uncalled_bet_enabled>true</uncalled_bet_enabled>
+    <mode>real</mode>
+    <gametype>Holdem NL €3/€6</gametype>
+    <tablename>Andeville, 888539199</tablename>
+    <tablecurrency>EUR</tablecurrency>
+    <duration>04:28:50</duration>
+    <gamecount>0</gamecount>
+    <startdate>2018-06-19 16:22:35</startdate>
+    <currency>EUR</currency>
+    <nickname>N/A</nickname>
+    <bets>€0</bets>
+    <wins>€0</wins>
+    <chipsin>€0</chipsin>
+    <chipsout>€0</chipsout>
+    <statuspoints>0.00</statuspoints>
+    <awardpoints>0.00</awardpoints>
+    <ipoints>0.00</ipoints>
+  </general>
+  <game gamecode="7972351305">
+    <general>
+      <startdate>2018-06-19 17:28:42</startdate>
+      <players>
+        <player name="HAZERA586" dealer="1" win="€0" bet="€3" chips="€600" seat="3" />
+        <player name="hulahHULAH" dealer="0" win="€6" bet="€6" chips="€792.58" seat="6" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="HAZERA586" no="1" type="1" cards="" />
+      <action sum="€6" player="hulahHULAH" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="hulahHULAH" type="Pocket">X X</cards>
+      <cards player="HAZERA586" type="Pocket">X X</cards>
+      <action sum="€0" player="HAZERA586" no="3" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972353709">
+    <general>
+      <startdate>2018-06-19 17:28:48</startdate>
+      <players>
+        <player name="HAZERA586" dealer="0" win="€6" bet="€6" chips="€597" seat="3" />
+        <player name="hulahHULAH" dealer="1" win="€0" bet="€3" chips="€795.58" seat="6" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="hulahHULAH" no="1" type="1" cards="" />
+      <action sum="€6" player="HAZERA586" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="HAZERA586" type="Pocket">X X</cards>
+      <cards player="hulahHULAH" type="Pocket">X X</cards>
+      <action sum="€0" player="hulahHULAH" no="3" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972353947">
+    <general>
+      <startdate>2018-06-19 17:28:57</startdate>
+      <players>
+        <player name="HAZERA586" dealer="1" win="€12" bet="€15" chips="€600" seat="3" />
+        <player name="hulahHULAH" dealer="0" win="€0" bet="€6" chips="€792.58" seat="6" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="HAZERA586" no="1" type="1" cards="" />
+      <action sum="€6" player="hulahHULAH" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="HAZERA586" type="Pocket">X X</cards>
+      <action sum="€12" player="HAZERA586" no="3" type="23" cards="" />
+      <cards player="hulahHULAH" type="Pocket">X X</cards>
+      <action sum="€0" player="hulahHULAH" no="4" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972353999">
+    <general>
+      <startdate>2018-06-19 17:29:08</startdate>
+      <players>
+        <player name="HAZERA586" dealer="0" win="€26" bet="€128" chips="€606" seat="3" />
+        <player name="hulahHULAH" dealer="1" win="€0" bet="€16" chips="€786.58" seat="6" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="hulahHULAH" no="1" type="1" cards="" />
+      <action sum="€6" player="HAZERA586" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="hulahHULAH" type="Pocket">X X</cards>
+      <action sum="€13" player="hulahHULAH" no="3" type="23" cards="" />
+      <cards player="HAZERA586" type="Pocket">X X</cards>
+      <action sum="€122" player="HAZERA586" no="4" type="23" cards="" />
+      <action sum="€0" player="hulahHULAH" no="5" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972354096">
+    <general>
+      <startdate>2018-06-19 17:29:31</startdate>
+      <players>
+        <player name="HAZERA586" dealer="1" win="€11.40" bet="€18" chips="€619" seat="3" />
+        <player name="hulahHULAH" dealer="0" win="€0" bet="€6" chips="€773.58" seat="6" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="HAZERA586" no="1" type="1" cards="" />
+      <action sum="€6" player="hulahHULAH" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="HAZERA586" type="Pocket">X X</cards>
+      <action sum="€3" player="HAZERA586" no="3" type="3" cards="" />
+      <cards player="hulahHULAH" type="Pocket">X X</cards>
+      <action sum="€0" player="hulahHULAH" no="4" type="4" cards="" />
+    </round>
+    <round no="2">
+      <cards player="" type="Flop">S6 D10 C8</cards>
+      <action sum="€0" player="hulahHULAH" no="5" type="4" cards="" />
+      <action sum="€12" player="HAZERA586" no="6" type="5" cards="" />
+      <action sum="€0" player="hulahHULAH" no="7" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972354197">
+    <general>
+      <startdate>2018-06-19 17:29:56</startdate>
+      <players>
+        <player name="HAZERA586" dealer="0" win="€0" bet="€624.40" chips="€624.40" seat="3" />
+        <player name="hulahHULAH" dealer="1" win="€1,247.80" bet="€767.58" chips="€767.58" seat="6" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="hulahHULAH" no="1" type="1" cards="" />
+      <action sum="€6" player="HAZERA586" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="hulahHULAH" type="Pocket">D2 S2</cards>
+      <action sum="€12" player="hulahHULAH" no="3" type="23" cards="" />
+      <cards player="HAZERA586" type="Pocket">H10 DK</cards>
+      <action sum="€18" player="HAZERA586" no="4" type="23" cards="" />
+      <action sum="€6" player="hulahHULAH" no="5" type="3" cards="" />
+    </round>
+    <round no="2">
+      <cards player="" type="Flop">H2 SK HJ</cards>
+      <action sum="€18" player="HAZERA586" no="6" type="5" cards="" />
+      <action sum="€66" player="hulahHULAH" no="7" type="23" cards="" />
+      <action sum="€114" player="HAZERA586" no="8" type="23" cards="" />
+      <action sum="€48" player="hulahHULAH" no="9" type="3" cards="" />
+    </round>
+    <round no="3">
+      <cards player="" type="Turn">C8</cards>
+      <action sum="€6" player="HAZERA586" no="10" type="5" cards="" />
+      <action sum="€635.58" player="hulahHULAH" no="11" type="23" cards="" />
+      <action sum="€486.40" player="HAZERA586" no="12" type="7" cards="" />
+    </round>
+    <round no="4">
+      <cards player="" type="River">CJ</cards>
+    </round>
+  </game>
+  <game gamecode="7972357088">
+    <general>
+      <startdate>2018-06-19 17:32:31</startdate>
+      <players>
+        <player name="LuckyYellowDog" dealer="1" win="€12" bet="€15" chips="€762.67" seat="5" />
+        <player name="Pipitr" dealer="0" win="€0" bet="€6" chips="€600" seat="8" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="LuckyYellowDog" no="1" type="1" cards="" />
+      <action sum="€6" player="Pipitr" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="LuckyYellowDog" type="Pocket">X X</cards>
+      <action sum="€12" player="LuckyYellowDog" no="3" type="23" cards="" />
+      <cards player="Pipitr" type="Pocket">X X</cards>
+      <action sum="€0" player="Pipitr" no="4" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972357166">
+    <general>
+      <startdate>2018-06-19 17:32:50</startdate>
+      <players>
+        <player name="LuckyYellowDog" dealer="0" win="€0" bet="€82.80" chips="€768.67" seat="5" />
+        <player name="Pipitr" dealer="1" win="€164.60" bet="€82.80" chips="€600" seat="8" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="Pipitr" no="1" type="1" cards="" />
+      <action sum="€6" player="LuckyYellowDog" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="Pipitr" type="Pocket">CA S7</cards>
+      <action sum="€15" player="Pipitr" no="3" type="23" cards="" />
+      <cards player="LuckyYellowDog" type="Pocket">HA H8</cards>
+      <action sum="€9" player="LuckyYellowDog" no="4" type="3" cards="" />
+    </round>
+    <round no="2">
+      <cards player="" type="Flop">C6 SA C7</cards>
+      <action sum="€0" player="LuckyYellowDog" no="5" type="4" cards="" />
+      <action sum="€19.50" player="Pipitr" no="6" type="5" cards="" />
+      <action sum="€19.50" player="LuckyYellowDog" no="7" type="3" cards="" />
+    </round>
+    <round no="3">
+      <cards player="" type="Turn">H6</cards>
+      <action sum="€0" player="LuckyYellowDog" no="8" type="4" cards="" />
+      <action sum="€0" player="Pipitr" no="9" type="4" cards="" />
+    </round>
+    <round no="4">
+      <cards player="" type="River">D2</cards>
+      <action sum="€48.30" player="LuckyYellowDog" no="10" type="5" cards="" />
+      <action sum="€48.30" player="Pipitr" no="11" type="3" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972357646">
+    <general>
+      <startdate>2018-06-19 17:34:16</startdate>
+      <players>
+        <player name="bob9798" dealer="0" win="€0" bet="€6" chips="€600" seat="3" />
+        <player name="LuckyYellowDog" dealer="1" win="€12" bet="€15" chips="€702.52" seat="5" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="LuckyYellowDog" no="1" type="1" cards="" />
+      <action sum="€6" player="bob9798" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="LuckyYellowDog" type="Pocket">X X</cards>
+      <action sum="€12" player="LuckyYellowDog" no="3" type="23" cards="" />
+      <cards player="bob9798" type="Pocket">X X</cards>
+      <action sum="€0" player="bob9798" no="4" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972357681">
+    <general>
+      <startdate>2018-06-19 17:34:23</startdate>
+      <players>
+        <player name="bob9798" dealer="1" win="€29" bet="€30" chips="€600" seat="3" />
+        <player name="LuckyYellowDog" dealer="0" win="€0" bet="€15" chips="€708.52" seat="5" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="bob9798" no="1" type="1" cards="" />
+      <action sum="€6" player="LuckyYellowDog" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="bob9798" type="Pocket">X X</cards>
+      <action sum="€15" player="bob9798" no="3" type="23" cards="" />
+      <cards player="LuckyYellowDog" type="Pocket">X X</cards>
+      <action sum="€9" player="LuckyYellowDog" no="4" type="3" cards="" />
+    </round>
+    <round no="2">
+      <cards player="" type="Flop">SA S2 D9</cards>
+      <action sum="€0" player="LuckyYellowDog" no="5" type="4" cards="" />
+      <action sum="€15" player="bob9798" no="6" type="5" cards="" />
+      <action sum="€0" player="LuckyYellowDog" no="7" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972357797">
+    <general>
+      <startdate>2018-06-19 17:34:50</startdate>
+      <players>
+        <player name="bob9798" dealer="0" win="€0" bet="€6" chips="€614" seat="3" />
+        <player name="LuckyYellowDog" dealer="1" win="€12" bet="€15" chips="€693.52" seat="5" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="LuckyYellowDog" no="1" type="1" cards="" />
+      <action sum="€6" player="bob9798" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="LuckyYellowDog" type="Pocket">X X</cards>
+      <action sum="€12" player="LuckyYellowDog" no="3" type="23" cards="" />
+      <cards player="bob9798" type="Pocket">X X</cards>
+      <action sum="€0" player="bob9798" no="4" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972357851">
+    <general>
+      <startdate>2018-06-19 17:35:01</startdate>
+      <players>
+        <player name="bob9798" dealer="1" win="€0" bet="€3" chips="€608" seat="3" />
+        <player name="LuckyYellowDog" dealer="0" win="€6" bet="€6" chips="€699.52" seat="5" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="bob9798" no="1" type="1" cards="" />
+      <action sum="€6" player="LuckyYellowDog" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="LuckyYellowDog" type="Pocket">X X</cards>
+      <cards player="bob9798" type="Pocket">X X</cards>
+      <action sum="€0" player="bob9798" no="3" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972357885">
+    <general>
+      <startdate>2018-06-19 17:35:12</startdate>
+      <players>
+        <player name="bob9798" dealer="0" win="€24" bet="€48" chips="€605" seat="3" />
+        <player name="LuckyYellowDog" dealer="1" win="€0" bet="€15" chips="€702.52" seat="5" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="LuckyYellowDog" no="1" type="1" cards="" />
+      <action sum="€6" player="bob9798" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="LuckyYellowDog" type="Pocket">X X</cards>
+      <action sum="€12" player="LuckyYellowDog" no="3" type="23" cards="" />
+      <cards player="bob9798" type="Pocket">X X</cards>
+      <action sum="€42" player="bob9798" no="4" type="23" cards="" />
+      <action sum="€0" player="LuckyYellowDog" no="5" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972357954">
+    <general>
+      <startdate>2018-06-19 17:35:29</startdate>
+      <players>
+        <player name="bob9798" dealer="1" win="€0" bet="€3" chips="€617" seat="3" />
+        <player name="LuckyYellowDog" dealer="0" win="€6" bet="€6" chips="€690.52" seat="5" />
+      </players>
+    </general>
+    <round no="0">
+      <action sum="€3" player="bob9798" no="1" type="1" cards="" />
+      <action sum="€6" player="LuckyYellowDog" no="2" type="2" cards="" />
+    </round>
+    <round no="1">
+      <cards player="LuckyYellowDog" type="Pocket">X X</cards>
+      <cards player="bob9798" type="Pocket">X X</cards>
+      <action sum="€0" player="bob9798" no="3" type="0" cards="" />
+    </round>
+  </game>
+  <game gamecode="7972742501">
+    <general>
+      <startdate>2018-06-19 23:28:08</startdate>
+      <players>
+        <player chips="€240" win="€0" dealer="1" seat="5" bet="€15" name="RIVERFOLD92" />
+        <player chips="€621.60" win="€24" dealer="0" seat="8" bet="€48" name="SicoXXI" />
+      </players>
+    </general>
+    <round no="0">
+      <action type="1" cards="" no="1" sum="€3" player="RIVERFOLD92" />
+      <action type="2" cards="" no="2" sum="€6" player="SicoXXI" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="RIVERFOLD92">X X</cards>
+      <action type="23" cards="" no="3" sum="€12" player="RIVERFOLD92" />
+      <cards type="Pocket" player="SicoXXI">X X</cards>
+      <action type="23" cards="" no="4" sum="€42" player="SicoXXI" />
+      <action type="0" cards="" no="5" sum="€0" player="RIVERFOLD92" />
+    </round>
+  </game>
+  <game gamecode="7972743640">
+    <general>
+      <startdate>2018-06-19 23:28:32</startdate>
+      <players>
+        <player chips="€240" win="€6" dealer="0" seat="5" bet="€6" name="RIVERFOLD92" />
+        <player chips="€633.60" win="€0" dealer="1" seat="8" bet="€3" name="SicoXXI" />
+      </players>
+    </general>
+    <round no="0">
+      <action type="1" cards="" no="1" sum="€3" player="SicoXXI" />
+      <action type="2" cards="" no="2" sum="€6" player="RIVERFOLD92" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="RIVERFOLD92">X X</cards>
+      <cards type="Pocket" player="SicoXXI">X X</cards>
+      <action type="0" cards="" no="3" sum="€0" player="SicoXXI" />
+    </round>
+  </game>
+  <game gamecode="7972747201">
+    <general>
+      <startdate>2018-06-19 23:32:57</startdate>
+      <players>
+        <player chips="€600" win="€37.40" dealer="0" seat="3" bet="€19.20" name="alittl3ch3ck13" />
+        <player chips="€630.60" win="€0" dealer="1" seat="8" bet="€19.20" name="SicoXXI" />
+      </players>
+    </general>
+    <round no="0">
+      <action type="1" cards="" no="1" sum="€3" player="SicoXXI" />
+      <action type="2" cards="" no="2" sum="€6" player="alittl3ch3ck13" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="SicoXXI">X X</cards>
+      <action type="23" cards="" no="3" sum="€12" player="SicoXXI" />
+      <cards type="Pocket" player="alittl3ch3ck13">D9 SQ</cards>
+      <action type="3" cards="" no="4" sum="€6" player="alittl3ch3ck13" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">S8 H8 S7</cards>
+      <action type="4" cards="" no="5" sum="€0" player="alittl3ch3ck13" />
+      <action type="5" cards="" no="6" sum="€7.20" player="SicoXXI" />
+      <action type="3" cards="" no="7" sum="€7.20" player="alittl3ch3ck13" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">S10</cards>
+      <action type="4" cards="" no="8" sum="€0" player="alittl3ch3ck13" />
+      <action type="4" cards="" no="9" sum="€0" player="SicoXXI" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">H9</cards>
+      <action type="4" cards="" no="10" sum="€0" player="alittl3ch3ck13" />
+      <action type="4" cards="" no="11" sum="€0" player="SicoXXI" />
+    </round>
+  </game>
+  <game gamecode="7972787426">
+    <general>
+      <startdate>2018-06-20 00:19:50</startdate>
+      <players>
+        <player chips="€1,066.15" win="€0" dealer="0" seat="5" bet="€163.20" name="RIVERFOLD92" />
+        <player chips="€659.90" win="€325.40" dealer="1" seat="10" bet="€163.20" name="MRWOOFY" />
+      </players>
+    </general>
+    <round no="0">
+      <action type="1" cards="" no="1" sum="€3" player="MRWOOFY" />
+      <action type="2" cards="" no="2" sum="€6" player="RIVERFOLD92" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="MRWOOFY">S9 H9</cards>
+      <action type="23" cards="" no="3" sum="€15" player="MRWOOFY" />
+      <cards type="Pocket" player="RIVERFOLD92">X X</cards>
+      <action type="23" cards="" no="4" sum="€54" player="RIVERFOLD92" />
+      <action type="3" cards="" no="5" sum="€39" player="MRWOOFY" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">C10 D3 H7</cards>
+      <action type="5" cards="" no="6" sum="€48" player="RIVERFOLD92" />
+      <action type="3" cards="" no="7" sum="€48" player="MRWOOFY" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">S6</cards>
+      <action type="4" cards="" no="8" sum="€0" player="RIVERFOLD92" />
+      <action type="5" cards="" no="9" sum="€61.20" player="MRWOOFY" />
+      <action type="3" cards="" no="10" sum="€61.20" player="RIVERFOLD92" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">HK</cards>
+      <action type="4" cards="" no="11" sum="€0" player="RIVERFOLD92" />
+      <action type="4" cards="" no="12" sum="€0" player="MRWOOFY" />
+    </round>
+  </game>
+  <game gamecode="7972787832">
+    <general>
+      <startdate>2018-06-20 00:21:31</startdate>
+      <players>
+        <player chips="€902.95" win="€12" dealer="1" seat="5" bet="€18" name="RIVERFOLD92" />
+        <player chips="€822.10" win="€0" dealer="0" seat="10" bet="€6" name="MRWOOFY" />
+      </players>
+    </general>
+    <round no="0">
+      <action type="1" cards="" no="1" sum="€3" player="RIVERFOLD92" />
+      <action type="2" cards="" no="2" sum="€6" player="MRWOOFY" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="RIVERFOLD92">X X</cards>
+      <action type="23" cards="" no="3" sum="€15" player="RIVERFOLD92" />
+      <cards type="Pocket" player="MRWOOFY">X X</cards>
+      <action type="0" cards="" no="4" sum="€0" player="MRWOOFY" />
+    </round>
+  </game>
+</session>
