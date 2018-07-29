@@ -1,6 +1,6 @@
 {
   "name": "hhp-xml",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Poker HandHistory Parser for XML formatted histories.",
   "main": "hhp-xml.js",
   "scripts": {
