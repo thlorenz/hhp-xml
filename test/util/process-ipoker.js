@@ -10,7 +10,7 @@ function processFile(hand, single = false) {
   const handPath = path.join(ipoker, `${hand}.xml`)
   const handsXml = fs.readFileSync(handPath, 'utf8')
   const res = parseHands(handsXml)
-  return single ? res[0] : res
+  return single ? res.parsedHands[0] : res.parsedHands
 }
 
 module.exports = processFile

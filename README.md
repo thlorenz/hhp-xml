@@ -6,7 +6,7 @@ Poker HandHistory Parser for XML formatted histories.
 const fs = require('fs')
 const { parseHands } = require('hhp-xml')
 const xml = fs.readFileSync('iPokerHistory.xml', 'utf8')
-const hands = parseHands(xml)
+const { parsedHands, errors, count } = parseHands(xml)
 ```
 
 ## Installation
@@ -39,7 +39,7 @@ The structure of the returned hand objects is the same as for
 
 -   `xml` **[String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** to parse
 
-Returns **([Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)> | null)** parsed hands or `null` if it cannot parse any hands
+Returns **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** parsed hands and errors encountered: `{ parsedHands: Array, errors: Array, count: Number }`
 
 ## License
 
