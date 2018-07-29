@@ -67,6 +67,22 @@ function canParse(xml) {
   return (/<session sessioncode="/i).test(xml)
 }
 
+function processGames(general, games) {
+  const parsedHands = []
+  const errors = []
+  for (const game of games) {
+    try {
+      const processedElements = new IPokerElementsProcessor(game).process()
+      const postProcessed = new IPokerPostProcessor(general, processedElements).process()
+      const adapted = ipokerAdapt(postProcessed)
+      parsedHands.push(adapted)
+    } catch (err) {
+      errors.push(err)
+    }
+  }
+  return { parsedHands, count: parsedHands.length, errors }
+}
+
 /**
  * Parses hands for Poker rooms that save them in xml format.
  * Currently only iPoker is supported.
@@ -76,25 +92,22 @@ function canParse(xml) {
  *
  * @name parseHands
  * @param {String} xml to parse
- * @returns {Array.<Object>|null} parsed hands or `null` if it cannot parse any hands
+ * @return {object} parsed hands and errors encountered: `{ parsedHands: Array, errors: Array, count: Number }`
  */
 function parseHands(xml) {
-  if (!canParse(xml)) return null
+  if (!canParse(xml)) return { parsedHands: null, errors: null, count: 0 }
 
   // Treat all histories as multiple hands since each file only has one <general> section
-  const essentialXml = removeXmlHeader(xml)
-  const fixedXml = removeControlChars(essentialXml)
-  const hands = xmljs.xml2js(fixedXml, { trim: true })
+  try {
+    const essentialXml = removeXmlHeader(xml)
+    const fixedXml = removeControlChars(essentialXml)
+    const hands = xmljs.xml2js(fixedXml, { trim: true })
 
-  const { general, games } = extractSession(hands)
-  const parsedHands = []
-  for (const game of games) {
-    const processedElements = new IPokerElementsProcessor(game).process()
-    const postProcessed = new IPokerPostProcessor(general, processedElements).process()
-    const adapted = ipokerAdapt(postProcessed)
-    parsedHands.push(adapted)
+    const { general, games } = extractSession(hands)
+    return processGames(general, games)
+  } catch (err) {
+    return { parsedHands: null, count: 0, errors: [ err ] }
   }
-  return parsedHands
 }
 
 module.exports = { parseHands, canParse }
