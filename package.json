@@ -12,6 +12,7 @@
   },
   "homepage": "https://github.com/thlorenz/hhp-xml",
   "dependencies": {
+    "hhp-util": "~0.1.1",
     "xml-js": "~1.6.4"
   },
   "devDependencies": {

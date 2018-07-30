@@ -52,9 +52,9 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'StoplossNo', type: 'fold' }
         , { player: 'sollert', type: 'fold' }
         , { player: '1ntr4nce', type: 'call', amount: 0.5 }
-        , { player: '1576893454', type: 'raise', amount: 4 }
-        , { player: '1ntr4nce', type: 'raise', amount: 12 }
-        , { player: '1576893454', type: 'raise', amount: 50 }
+        , { player: '1576893454', type: 'raise', amount: 3.5, raiseTo: 4 }
+        , { player: '1ntr4nce', type: 'raise', amount: 8, raiseTo: 12 }
+        , { player: '1576893454', type: 'raise', amount: 38, raiseTo: 50 }
         , { player: '1ntr4nce', type: 'call', amount: 38 } ]
      , flop: []
      , turn: []
@@ -103,7 +103,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: '1576893454', type: 'sb', amount: 0.5 }
         , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'sollert', type: 'raise', amount: 3 }
+        [ { player: 'sollert', type: 'raise', amount: 3, raiseTo: 3 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: '1576893454', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' } ]
@@ -247,7 +247,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'FENIX505', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: '1576893454', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        , { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'sollert', type: 'fold' }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' } ]
@@ -298,7 +298,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: 'StoplossNo', type: 'fold' }
         , { player: 'sollert', type: 'fold' }
-        , { player: '1ntr4nce', type: 'raise', amount: 2.5 }
+        , { player: '1ntr4nce', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FENIX505', type: 'fold' }
         , { player: '1576893454', type: 'fold' } ]
      , flop: []
@@ -347,7 +347,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'sollert', type: 'fold' }
-        , { player: '1ntr4nce', type: 'raise', amount: 2.5 }
+        , { player: '1ntr4nce', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FENIX505', type: 'call', amount: 2.5 }
         , { player: '1576893454', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' } ]
@@ -401,7 +401,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
-        , { player: '1576893454', type: 'raise', amount: 2.5 }
+        , { player: '1576893454', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'sollert', type: 'fold' } ]
      , flop: []
@@ -500,7 +500,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: '1576893454', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'sollert', type: 'raise', amount: 3 }
+        , { player: 'sollert', type: 'raise', amount: 3, raiseTo: 3 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' } ]
      , flop: []
@@ -549,7 +549,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: '1576893454', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'StoplossNo', type: 'fold' }
-        , { player: 'sollert', type: 'raise', amount: 3.5 }
+        , { player: 'sollert', type: 'raise', amount: 3.5, raiseTo: 3.5 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
         , { player: '1576893454', type: 'fold' } ]
@@ -649,7 +649,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
-        , { player: '1576893454', type: 'raise', amount: 2.5 }
+        , { player: '1576893454', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'sollert', type: 'fold' } ]
      , flop: []
@@ -700,7 +700,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'FENIX505', type: 'fold' }
         , { player: '1576893454', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'sollert', type: 'raise', amount: 2.5 }
+        , { player: 'sollert', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: '1ntr4nce', type: 'call', amount: 1.5 } ]
      , flop:
         [ { player: 'sollert', type: 'check' }
@@ -755,7 +755,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: '1576893454', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'sollert', type: 'raise', amount: 3 }
+        , { player: 'sollert', type: 'raise', amount: 3, raiseTo: 3 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' } ]
      , flop: []
@@ -804,7 +804,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: '1576893454', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'StoplossNo', type: 'fold' }
-        , { player: 'sollert', type: 'raise', amount: 2.5 }
+        , { player: 'sollert', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: '1ntr4nce', type: 'call', amount: 2.5 }
         , { player: 'FENIX505', type: 'fold' }
         , { player: '1576893454', type: 'call', amount: 1.5 } ]
@@ -910,7 +910,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'StoplossNo', type: 'sb', amount: 0.5 }
         , { player: 'sollert', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: '1ntr4nce', type: 'raise', amount: 2.5 }
+        [ { player: '1ntr4nce', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FENIX505', type: 'fold' }
         , { player: '1576893454', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
@@ -1020,8 +1020,8 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: '1576893454', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'sollert', type: 'raise', amount: 3 }
-        , { player: '1ntr4nce', type: 'raise', amount: 10 }
+        , { player: 'sollert', type: 'raise', amount: 3, raiseTo: 3 }
+        , { player: '1ntr4nce', type: 'raise', amount: 7, raiseTo: 10 }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'sollert', type: 'fold' } ]
      , flop: []
@@ -1073,9 +1073,9 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: '1576893454', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'sollert', type: 'fold' }
-        , { player: '1ntr4nce', type: 'raise', amount: 2.5 }
+        , { player: '1ntr4nce', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FENIX505', type: 'fold' }
-        , { player: 'Imfairminded', type: 'raise', amount: 7 }
+        , { player: 'Imfairminded', type: 'raise', amount: 4.5, raiseTo: 7 }
         , { player: '1ntr4nce', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -1124,7 +1124,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: '1576893454', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'StoplossNo', type: 'fold' }
-        , { player: 'sollert', type: 'raise', amount: 3 }
+        , { player: 'sollert', type: 'raise', amount: 3, raiseTo: 3 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'Imfairminded', type: 'call', amount: 2.5 }
@@ -1182,14 +1182,14 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'sollert', type: 'call', amount: 1 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
-        , { player: 'Imfairminded', type: 'raise', amount: 3 }
+        , { player: 'Imfairminded', type: 'raise', amount: 2, raiseTo: 3 }
         , { player: '1576893454', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'sollert', type: 'call', amount: 2 } ]
      , flop:
         [ { player: 'sollert', type: 'check' }
         , { player: 'Imfairminded', type: 'bet', amount: 4 }
-        , { player: 'sollert', type: 'raise', amount: 14.4 }
+        , { player: 'sollert', type: 'raise', amount: 10.4, raiseTo: 14.4 }
         , { player: 'Imfairminded', type: 'call', amount: 10.4 } ]
      , turn:
         [ { player: 'sollert', type: 'bet', amount: 29.03 }
@@ -1289,7 +1289,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'Imfairminded', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: '1576893454', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        , { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'Imfairminded', type: 'fold' } ]
      , flop: []
@@ -1337,7 +1337,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: '1576893454', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'StoplossNo', type: 'fold' }
-        , { player: '1ntr4nce', type: 'raise', amount: 2.5 }
+        , { player: '1ntr4nce', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'Imfairminded', type: 'fold' }
         , { player: '1576893454', type: 'fold' } ]
      , flop: []
@@ -1386,7 +1386,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: '1ntr4nce', type: 'fold' }
         , { player: 'Imfairminded', type: 'fold' }
-        , { player: '1576893454', type: 'raise', amount: 3 }
+        , { player: '1576893454', type: 'raise', amount: 3, raiseTo: 3 }
         , { player: 'StoplossNo', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -1432,7 +1432,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'Imfairminded', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: '1576893454', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        , { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'Imfairminded', type: 'call', amount: 1.5 } ]
      , flop:
         [ { player: 'StoplossNo', type: 'bet', amount: 2.5 }
@@ -1483,8 +1483,8 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: '1576893454', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Imfairminded', type: 'raise', amount: 3 }
-        , { player: '1576893454', type: 'raise', amount: 9 }
+        , { player: 'Imfairminded', type: 'raise', amount: 3, raiseTo: 3 }
+        , { player: '1576893454', type: 'raise', amount: 6, raiseTo: 9 }
         , { player: 'Imfairminded', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -1529,7 +1529,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: '1576893454', type: 'sb', amount: 0.5 }
         , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'Imfairminded', type: 'raise', amount: 2 }
+        [ { player: 'Imfairminded', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: '1576893454', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' } ]
      , flop: []
@@ -1575,7 +1575,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'StoplossNo', type: 'sb', amount: 0.5 }
         , { player: 'Imfairminded', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: '1576893454', type: 'raise', amount: 2.5 }
+        [ { player: '1576893454', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'Imfairminded', type: 'fold' } ]
      , flop: []
@@ -1621,9 +1621,9 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'Imfairminded', type: 'sb', amount: 0.5 }
         , { player: '1576893454', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'StoplossNo', type: 'raise', amount: 2 }
+        [ { player: 'StoplossNo', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'Imfairminded', type: 'fold' }
-        , { player: '1576893454', type: 'raise', amount: 7 }
+        , { player: '1576893454', type: 'raise', amount: 5, raiseTo: 7 }
         , { player: 'StoplossNo', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -1676,7 +1676,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'OwenHa', type: 'raise', amount: 2 }
+        , { player: 'OwenHa', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'StoplossNo', type: 'call', amount: 1 } ]
      , flop:
         [ { player: 'OwenHa', type: 'bet', amount: 3 }
@@ -1788,7 +1788,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'OwenHa', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'steve8197', type: 'raise', amount: 2 }
+        , { player: 'steve8197', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: '1ntr4nce', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -1890,7 +1890,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'OwenHa', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'steve8197', type: 'fold' }
-        , { player: '1ntr4nce', type: 'raise', amount: 2.5 }
+        , { player: '1ntr4nce', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' } ]
      , flop: []
@@ -1942,7 +1942,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'StoplossNo', type: 'fold' }
         , { player: 'steve8197', type: 'fold' }
         , { player: '1ntr4nce', type: 'fold' }
-        , { player: 'FENIX505', type: 'raise', amount: 2.5 }
+        , { player: 'FENIX505', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'OwenHa', type: 'call', amount: 1.5 } ]
      , flop:
@@ -1994,12 +1994,15 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'OwenHa', type: 'sb', amount: 0.5 }
         , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'steve8197', type: 'raise', amount: 2 }
-        , { player: '1ntr4nce', type: 'raise', amount: 6 }
+        [ { player: 'steve8197', type: 'raise', amount: 2, raiseTo: 2 }
+        , { player: '1ntr4nce', type: 'raise', amount: 4, raiseTo: 6 }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'OwenHa', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 26.7 }
+        , { player: 'StoplossNo'
+          , type: 'raise'
+          , amount: 20.7
+          , raiseTo: 26.7 }
         , { player: 'steve8197', type: 'fold' }
         , { player: '1ntr4nce', type: 'call', amount: 20.7 } ]
      , flop: []
@@ -2055,7 +2058,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'OwenHa', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        , { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'steve8197', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -2106,7 +2109,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 1 }
         , { player: 'OwenHa', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 4 }
+        , { player: 'StoplossNo', type: 'raise', amount: 3, raiseTo: 4 }
         , { player: 'steve8197', type: 'call', amount: 3.5 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 3 } ]
@@ -2164,7 +2167,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'OwenHa', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'steve8197', type: 'raise', amount: 2 }
+        , { player: 'steve8197', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' } ]
      , flop: []
@@ -2214,7 +2217,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'OwenHa', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        , { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'steve8197', type: 'fold' }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
@@ -2267,7 +2270,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: 'StoplossNo', type: 'fold' }
         , { player: 'steve8197', type: 'fold' }
-        , { player: '1ntr4nce', type: 'raise', amount: 2.5 }
+        , { player: '1ntr4nce', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 2 }
         , { player: 'OwenHa', type: 'fold' } ]
@@ -2322,7 +2325,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'OwenHa', type: 'sb', amount: 0.5 }
         , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'steve8197', type: 'raise', amount: 2 }
+        [ { player: 'steve8197', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
@@ -2378,7 +2381,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'steve8197', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: '1ntr4nce', type: 'fold' }
-        , { player: 'FENIX505', type: 'raise', amount: 2.5 }
+        , { player: 'FENIX505', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FRENCHJS88', type: 'call', amount: 2.5 }
         , { player: 'OwenHa', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
@@ -2435,7 +2438,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: '1ntr4nce', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'FENIX505', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'raise', amount: 3 }
+        , { player: 'FRENCHJS88', type: 'raise', amount: 3, raiseTo: 3 }
         , { player: 'OwenHa', type: 'call', amount: 3 }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'steve8197', type: 'call', amount: 2.5 }
@@ -2502,7 +2505,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'FRENCHJS88', type: 'call', amount: 1 }
         , { player: 'OwenHa', type: 'call', amount: 1 }
         , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'steve8197', type: 'raise', amount: 2 }
+        , { player: 'steve8197', type: 'raise', amount: 1, raiseTo: 2 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 1 }
@@ -2561,7 +2564,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'OwenHa', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'steve8197', type: 'fold' }
-        , { player: '1ntr4nce', type: 'raise', amount: 2.5 }
+        , { player: '1ntr4nce', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 1.5 } ]
      , flop:
@@ -2614,7 +2617,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'OwenHa', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'StoplossNo', type: 'fold' }
-        , { player: 'steve8197', type: 'raise', amount: 2 }
+        , { player: 'steve8197', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
@@ -2735,7 +2738,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'OwenHa', type: 'raise', amount: 3 }
+        , { player: 'OwenHa', type: 'raise', amount: 3, raiseTo: 3 }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'steve8197', type: 'call', amount: 2 } ]
      , flop:
@@ -2789,7 +2792,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'OwenHa', type: 'raise', amount: 2 }
+        , { player: 'OwenHa', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'steve8197', type: 'fold' }
         , { player: '1ntr4nce', type: 'fold' } ]
@@ -2840,7 +2843,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: 'OwenHa', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
-        , { player: '1ntr4nce', type: 'raise', amount: 2.5 }
+        , { player: '1ntr4nce', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' } ]
      , flop: []
@@ -2889,7 +2892,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
         , { player: 'OwenHa', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        [ { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
@@ -2960,7 +2963,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'StoplossNo', type: 'call', amount: 6 } ]
      , river:
         [ { player: 'OwenHa', type: 'bet', amount: 18 }
-        , { player: 'StoplossNo', type: 'allin', amount: -7, raiseTo: 11 } ]
+        , { player: 'StoplossNo', type: 'call', amount: 11, allin: true } ]
      , showdown:
         [ { player: 'StoplossNo', type: 'collect', amount: 38 }
         , { player: 'OwenHa', type: 'show', card1: 'Ts', card2: '6d' }
@@ -3008,7 +3011,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: 'FENIX505', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 1 }
-        , { player: 'OwenHa', type: 'raise', amount: 25.59 }
+        , { player: 'OwenHa', type: 'raise', amount: 24.59, raiseTo: 25.59 }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' } ]
@@ -3057,7 +3060,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'OwenHa', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        , { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: '1ntr4nce', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 1.5 } ]
      , flop:
@@ -3108,7 +3111,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'OwenHa', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'StoplossNo', type: 'fold' }
-        , { player: '1ntr4nce', type: 'raise', amount: 2.5 }
+        , { player: '1ntr4nce', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'OwenHa', type: 'fold' } ]
      , flop: []
@@ -3157,7 +3160,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: '1ntr4nce', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'OwenHa', type: 'raise', amount: 2 }
+        , { player: 'OwenHa', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'StoplossNo', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -3252,7 +3255,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: 'OwenHa', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'danikeen', type: 'raise', amount: 2.5 }
+        , { player: 'danikeen', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'FRENCHJS88', type: 'call', amount: 1.5 } ]
      , flop:
         [ { player: 'danikeen', type: 'bet', amount: 2.5 }
@@ -3314,7 +3317,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'FRENCHJS88', type: 'call', amount: 1 } ]
      , river:
         [ { player: 'FRENCHJS88', type: 'bet', amount: 3 }
-        , { player: 'OwenHa', type: 'raise', amount: 26.09 }
+        , { player: 'OwenHa', type: 'raise', amount: 23.09, raiseTo: 26.09 }
         , { player: 'FRENCHJS88', type: 'fold' } ]
      , showdown: [ { player: 'OwenHa', type: 'collect', amount: 9.5 } ]
      , summary: [ { type: 'pot', single: true, amount: 9.5 } ]
@@ -3405,7 +3408,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'danikeen', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'FRENCHJS88', type: 'call', amount: 1 }
-        , { player: 'OwenHa', type: 'raise', amount: 32.09 }
+        , { player: 'OwenHa', type: 'raise', amount: 31.09, raiseTo: 32.09 }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' } ]
@@ -3454,7 +3457,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'OwenHa', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        , { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' } ]
      , flop: []
@@ -3551,7 +3554,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'OwenHa', type: 'raise', amount: 2 }
+        , { player: 'OwenHa', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'StoplossNo', type: 'call', amount: 1 } ]
      , flop:
         [ { player: 'OwenHa', type: 'bet', amount: 4 }
@@ -3656,7 +3659,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , flop:
         [ { player: 'FRENCHJS88', type: 'check' }
         , { player: 'StoplossNo', type: 'bet', amount: 1 }
-        , { player: 'FRENCHJS88', type: 'raise', amount: 5 }
+        , { player: 'FRENCHJS88', type: 'raise', amount: 4, raiseTo: 5 }
         , { player: 'StoplossNo', type: 'fold' } ]
      , turn: []
      , river: []
@@ -3792,7 +3795,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
         , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'Attila406', type: 'raise', amount: 2 }
+        [ { player: 'Attila406', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'StoplossNo', type: 'call', amount: 1 } ]
      , flop:
@@ -3842,7 +3845,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'Attila406', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        , { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'Attila406', type: 'call', amount: 1.5 } ]
      , flop:
         [ { player: 'StoplossNo', type: 'bet', amount: 2.5 }
@@ -3889,7 +3892,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'Attila406', type: 'sb', amount: 0.5 }
         , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        [ { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'Attila406', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 1.5 } ]
      , flop:
@@ -3939,7 +3942,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
         , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'Attila406', type: 'raise', amount: 2 }
+        [ { player: 'Attila406', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'StoplossNo', type: 'call', amount: 1 } ]
      , flop:
@@ -4045,7 +4048,7 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'raise', amount: 2 }
+        , { player: 'Attila406', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'danikeen', type: 'call', amount: 1 } ]
      , flop:
         [ { player: 'Attila406', type: 'check' }
@@ -4096,7 +4099,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'raise', amount: 2 }
+        , { player: 'Attila406', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 1 } ]
      , flop:
@@ -4334,7 +4337,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
         , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'Attila406', type: 'raise', amount: 2 }
+        [ { player: 'Attila406', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 1.5 }
         , { player: 'StoplossNo', type: 'fold' } ]
@@ -4388,12 +4391,15 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 1 }
-        , { player: 'StoplossNo', type: 'raise', amount: 4 }
+        , { player: 'StoplossNo', type: 'raise', amount: 3, raiseTo: 4 }
         , { player: 'Attila406', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 3 } ]
      , flop:
         [ { player: 'StoplossNo', type: 'bet', amount: 4.5 }
-        , { player: 'FRENCHJS88', type: 'raise', amount: 31.1 }
+        , { player: 'FRENCHJS88'
+          , type: 'raise'
+          , amount: 26.6
+          , raiseTo: 31.1 }
         , { player: 'StoplossNo', type: 'call', amount: 26.6 } ]
      , turn: []
      , river: []
@@ -4442,7 +4448,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'danikeen', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'FRENCHJS88', type: 'call', amount: 1 }
-        , { player: 'StoplossNo', type: 'raise', amount: 3 }
+        , { player: 'StoplossNo', type: 'raise', amount: 2, raiseTo: 3 }
         , { player: 'Attila406', type: 'call', amount: 2.5 }
         , { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'call', amount: 2 } ]
@@ -4497,7 +4503,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'danikeen', type: 'sb', amount: 0.5 }
         , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        [ { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'Attila406', type: 'call', amount: 2.5 }
         , { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' } ]
@@ -4551,7 +4557,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
         , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'Attila406', type: 'raise', amount: 2 }
+        [ { player: 'Attila406', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'StoplossNo', type: 'call', amount: 1 } ]
@@ -4703,7 +4709,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'danikeen', type: 'sb', amount: 0.5 }
         , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        [ { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'Attila406', type: 'fold' }
         , { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' } ]
@@ -4801,7 +4807,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'StoplossNo', type: 'sb', amount: 0.5 }
         , { player: 'Attila406', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'danikeen', type: 'raise', amount: 3 }
+        [ { player: 'danikeen', type: 'raise', amount: 3, raiseTo: 3 }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'Attila406', type: 'fold' } ]
@@ -4850,7 +4856,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'danikeen', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        , { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'Attila406', type: 'fold' }
         , { player: 'danikeen', type: 'fold' } ]
      , flop: []
@@ -4902,12 +4908,15 @@ test(`ipoker: ${file} first 100`, function(t) {
      , preflop:
         [ { player: 'DEVINSINGH123', type: 'check' }
         , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'raise', amount: 3 }
-        , { player: 'danikeen', type: 'raise', amount: 9 }
+        , { player: 'Attila406', type: 'raise', amount: 3, raiseTo: 3 }
+        , { player: 'danikeen', type: 'raise', amount: 6, raiseTo: 9 }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'DEVINSINGH123', type: 'fold' }
-        , { player: 'Attila406', type: 'raise', amount: 52.62 }
-        , { player: 'danikeen', type: 'allin', amount: 41.5, raiseTo: 41.5 } ]
+        , { player: 'Attila406'
+          , type: 'raise'
+          , amount: 43.62
+          , raiseTo: 52.62 }
+        , { player: 'danikeen', type: 'call', amount: 41.5, allin: true } ]
      , flop: []
      , turn: []
      , river: []
@@ -4968,7 +4977,10 @@ test(`ipoker: ${file} first 100`, function(t) {
      , turn:
         [ { player: 'FRENCHJS88', type: 'check' }
         , { player: 'DEVINSINGH123', type: 'bet', amount: 3 }
-        , { player: 'FRENCHJS88', type: 'raise', amount: 59.42 }
+        , { player: 'FRENCHJS88'
+          , type: 'raise'
+          , amount: 56.42
+          , raiseTo: 59.42 }
         , { player: 'DEVINSINGH123', type: 'fold' } ]
      , river: []
      , showdown: [ { player: 'FRENCHJS88', type: 'collect', amount: 11.4 } ]
@@ -5015,7 +5027,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'raise', amount: 3.5 }
+        , { player: 'danikeen', type: 'raise', amount: 3.5, raiseTo: 3.5 }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'DEVINSINGH123', type: 'call', amount: 3 }
         , { player: 'StoplossNo', type: 'fold' } ]
@@ -5075,7 +5087,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'StoplossNo', type: 'sb', amount: 0.5 }
         , { player: 'Jadah', type: 'bb', amount: 1 } ]
      , preflop:
-        [ { player: 'Attila406', type: 'raise', amount: 2 }
+        [ { player: 'Attila406', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'DEVINSINGH123', type: 'fold' }
@@ -5130,7 +5142,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         [ { player: 'danikeen', type: 'fold' }
         , { player: 'FRENCHJS88', type: 'fold' }
         , { player: 'DEVINSINGH123', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
+        , { player: 'StoplossNo', type: 'raise', amount: 2.5, raiseTo: 2.5 }
         , { player: 'Jadah', type: 'fold' }
         , { player: 'Attila406', type: 'fold' } ]
      , flop: []
@@ -5181,7 +5193,7 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'danikeen', type: 'bb', amount: 1 } ]
      , preflop:
         [ { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'DEVINSINGH123', type: 'raise', amount: 2 }
+        , { player: 'DEVINSINGH123', type: 'raise', amount: 2, raiseTo: 2 }
         , { player: 'StoplossNo', type: 'fold' }
         , { player: 'Jadah', type: 'fold' }
         , { player: 'Attila406', type: 'fold' }
@@ -5197,1740 +5209,6 @@ test(`ipoker: ${file} first 100`, function(t) {
         , { player: 'DEVINSINGH123', type: 'fold' } ]
      , showdown: [ { player: 'danikeen', type: 'collect', amount: 4.28 } ]
      , summary: [ { type: 'pot', single: true, amount: 4.28 } ]
-     , hero: null
-     , holecards: null } ])
-  t.end()
-})
-
-test(`ipoker: ${file} remaining`, function(t) {
-  const res = processFile(file)
-  spok(t, res.slice(100),
-    [ { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 67.82 }
-        , { seatno: 3, player: 'DEVINSINGH123', chips: 23.65 }
-        , { seatno: 5, player: 'StoplossNo', chips: 48.68 }
-        , { seatno: 6, player: 'Jadah', chips: 40 }
-        , { seatno: 8, player: 'Attila406', chips: 101.12 }
-        , { seatno: 10, player: 'danikeen', chips: 52.28 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 16
-        , min: 59
-        , sec: 58
-        , hero: null
-        , handid: '7973248335'
-        , gameno: '7973248335'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 8 }
-     , board: { card1: '5d', card2: 'Ah', card3: 'Qs' }
-     , posts:
-        [ { player: 'danikeen', type: 'sb', amount: 0.5 }
-        , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'DEVINSINGH123', type: 'raise', amount: 4 }
-        , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Jadah', type: 'raise', amount: 13.5 }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'DEVINSINGH123', type: 'call', amount: 9.5 } ]
-     , flop:
-        [ { player: 'DEVINSINGH123', type: 'check' }
-        , { player: 'Jadah', type: 'bet', amount: 14.25 }
-        , { player: 'DEVINSINGH123', type: 'fold' } ]
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'Jadah', type: 'collect', amount: 27.08 } ]
-     , summary: [ { type: 'pot', single: true, amount: 27.08 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 66.82 }
-        , { seatno: 3, player: 'DEVINSINGH123', chips: 10.15 }
-        , { seatno: 5, player: 'StoplossNo', chips: 48.68 }
-        , { seatno: 6, player: 'Jadah', chips: 53.58 }
-        , { seatno: 8, player: 'Attila406', chips: 101.12 }
-        , { seatno: 10, player: 'danikeen', chips: 51.78 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 0
-        , sec: 28
-        , hero: null
-        , handid: '7973248773'
-        , gameno: '7973248773'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 10 }
-     , board:
-        { card1: '6h', card2: '2d', card3: '2c', card4: '5h', card5: '8c' }
-     , posts:
-        [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
-        , { player: 'DEVINSINGH123', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'StoplossNo', type: 'raise', amount: 2.5 }
-        , { player: 'Jadah', type: 'call', amount: 2.5 }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'DEVINSINGH123', type: 'call', amount: 1.5 } ]
-     , flop:
-        [ { player: 'DEVINSINGH123', type: 'check' }
-        , { player: 'StoplossNo', type: 'bet', amount: 5 }
-        , { player: 'Jadah', type: 'call', amount: 5 }
-        , { player: 'DEVINSINGH123', type: 'fold' } ]
-     , turn:
-        [ { player: 'StoplossNo', type: 'check' }
-        , { player: 'Jadah', type: 'check' } ]
-     , river:
-        [ { player: 'StoplossNo', type: 'check' }
-        , { player: 'Jadah', type: 'bet', amount: 10 }
-        , { player: 'StoplossNo', type: 'fold' } ]
-     , showdown: [ { player: 'Jadah', type: 'collect', amount: 17.1 } ]
-     , summary: [ { type: 'pot', single: true, amount: 17.1 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 66.32 }
-        , { seatno: 3, player: 'DEVINSINGH123', chips: 7.65 }
-        , { seatno: 5, player: 'StoplossNo', chips: 41.18 }
-        , { seatno: 6, player: 'Jadah', chips: 63.18 }
-        , { seatno: 8, player: 'Attila406', chips: 101.12 }
-        , { seatno: 10, player: 'danikeen', chips: 51.78 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 1
-        , sec: 51
-        , hero: null
-        , handid: '7973249812'
-        , gameno: '7973249812'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 1 }
-     , board: {}
-     , posts:
-        [ { player: 'DEVINSINGH123', type: 'sb', amount: 0.5 }
-        , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'Jadah', type: 'fold' }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'DEVINSINGH123', type: 'call', amount: 0.5 }
-        , { player: 'StoplossNo', type: 'raise', amount: 8 }
-        , { player: 'DEVINSINGH123', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'StoplossNo', type: 'collect', amount: 2 } ]
-     , summary: [ { type: 'pot', single: true, amount: 2 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 66.32 }
-        , { seatno: 3, player: 'DEVINSINGH123', chips: 6.65 }
-        , { seatno: 5, player: 'StoplossNo', chips: 42.18 }
-        , { seatno: 6, player: 'Jadah', chips: 63.18 }
-        , { seatno: 8, player: 'Attila406', chips: 101.12 }
-        , { seatno: 10, player: 'danikeen', chips: 51.78 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 2
-        , sec: 40
-        , hero: null
-        , handid: '7973249991'
-        , gameno: '7973249991'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 3 }
-     , board: {}
-     , posts:
-        [ { player: 'StoplossNo', type: 'sb', amount: 0.5 }
-        , { player: 'Jadah', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'DEVINSINGH123', type: 'fold' }
-        , { player: 'StoplossNo', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'Jadah', type: 'collect', amount: 1 } ]
-     , summary: [ { type: 'pot', single: true, amount: 1 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 66.32 }
-        , { seatno: 3, player: 'DEVINSINGH123', chips: 6.65 }
-        , { seatno: 5, player: 'StoplossNo', chips: 41.68 }
-        , { seatno: 6, player: 'Jadah', chips: 63.68 }
-        , { seatno: 8, player: 'Attila406', chips: 101.12 }
-        , { seatno: 10, player: 'danikeen', chips: 51.78 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 2
-        , sec: 58
-        , hero: null
-        , handid: '7973251375'
-        , gameno: '7973251375'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 5 }
-     , board: { card1: 'Qs', card2: 'Tc', card3: 'As' }
-     , posts:
-        [ { player: 'Jadah', type: 'sb', amount: 0.5 }
-        , { player: 'Attila406', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'danikeen', type: 'raise', amount: 3 }
-        , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'DEVINSINGH123', type: 'fold' }
-        , { player: 'StoplossNo', type: 'call', amount: 3 }
-        , { player: 'Jadah', type: 'fold' }
-        , { player: 'Attila406', type: 'fold' } ]
-     , flop:
-        [ { player: 'danikeen', type: 'bet', amount: 3.75 }
-        , { player: 'StoplossNo', type: 'fold' } ]
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'danikeen', type: 'collect', amount: 7.13 } ]
-     , summary: [ { type: 'pot', single: true, amount: 7.13 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 66.32 }
-        , { seatno: 3, player: 'DEVINSINGH123', chips: 6.65 }
-        , { seatno: 5, player: 'StoplossNo', chips: 38.68 }
-        , { seatno: 6, player: 'Jadah', chips: 63.18 }
-        , { seatno: 8, player: 'Attila406', chips: 100.12 }
-        , { seatno: 10, player: 'danikeen', chips: 55.91 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 3
-        , sec: 43
-        , hero: null
-        , handid: '7973251531'
-        , gameno: '7973251531'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 6 }
-     , board:
-        { card1: '2s', card2: '5h', card3: '7c', card4: 'Td', card5: '3d' }
-     , posts:
-        [ { player: 'Attila406', type: 'sb', amount: 0.5 }
-        , { player: 'danikeen', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'FRENCHJS88', type: 'call', amount: 1 }
-        , { player: 'DEVINSINGH123', type: 'raise', amount: 6.65 }
-        , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Jadah', type: 'fold' }
-        , { player: 'Attila406', type: 'raise', amount: 16.46 }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown:
-        [ { player: 'Attila406', type: 'collect', amount: 14.54 }
-        , { player: 'DEVINSINGH123'
-          , type: 'show'
-          , card1: 'Qs'
-          , card2: 'Ks' }
-        , { player: 'Attila406', type: 'show', card1: 'Kc', card2: 'Ad' } ]
-     , summary: [ { type: 'pot', single: true, amount: 14.54 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 65.32 }
-        , { seatno: 5, player: 'StoplossNo', chips: 38.68 }
-        , { seatno: 6, player: 'Jadah', chips: 63.18 }
-        , { seatno: 8, player: 'Attila406', chips: 108.01 }
-        , { seatno: 10, player: 'danikeen', chips: 54.91 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 4
-        , sec: 21
-        , hero: null
-        , handid: '7973252921'
-        , gameno: '7973252921'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 8 }
-     , board: { card1: 'Ac', card2: '7d', card3: '5d' }
-     , posts:
-        [ { player: 'danikeen', type: 'sb', amount: 0.5 }
-        , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Jadah', type: 'fold' }
-        , { player: 'Attila406', type: 'raise', amount: 2 }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'call', amount: 1 } ]
-     , flop:
-        [ { player: 'FRENCHJS88', type: 'check' }
-        , { player: 'Attila406', type: 'bet', amount: 2 }
-        , { player: 'FRENCHJS88', type: 'fold' } ]
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'Attila406', type: 'collect', amount: 4.28 } ]
-     , summary: [ { type: 'pot', single: true, amount: 4.28 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 63.32 }
-        , { seatno: 5, player: 'StoplossNo', chips: 38.68 }
-        , { seatno: 6, player: 'Jadah', chips: 63.18 }
-        , { seatno: 8, player: 'Attila406', chips: 110.29 }
-        , { seatno: 10, player: 'danikeen', chips: 54.41 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 4
-        , sec: 47
-        , hero: null
-        , handid: '7973253017'
-        , gameno: '7973253017'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 10 }
-     , board: { card1: '2s', card2: '2h', card3: '6s', card4: '4h' }
-     , posts:
-        [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
-        , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'Jadah', type: 'fold' }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'call', amount: 0.5 }
-        , { player: 'StoplossNo', type: 'check' } ]
-     , flop:
-        [ { player: 'FRENCHJS88', type: 'bet', amount: 1 }
-        , { player: 'StoplossNo', type: 'call', amount: 1 } ]
-     , turn:
-        [ { player: 'FRENCHJS88', type: 'check' }
-        , { player: 'StoplossNo', type: 'bet', amount: 3 }
-        , { player: 'FRENCHJS88', type: 'fold' } ]
-     , river: []
-     , showdown: [ { player: 'StoplossNo', type: 'collect', amount: 3.8 } ]
-     , summary: [ { type: 'pot', single: true, amount: 3.8 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 61.32 }
-        , { seatno: 5, player: 'StoplossNo', chips: 40.48 }
-        , { seatno: 8, player: 'Attila406', chips: 110.29 }
-        , { seatno: 10, player: 'danikeen', chips: 54.41 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 5
-        , sec: 17
-        , hero: null
-        , handid: '7973253136'
-        , gameno: '7973253136'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 1 }
-     , board:
-        { card1: '6s', card2: 'Kh', card3: '7h', card4: 'Ac', card5: 'Kd' }
-     , posts:
-        [ { player: 'StoplossNo', type: 'sb', amount: 0.5 }
-        , { player: 'Attila406', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'call', amount: 1 }
-        , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'check' } ]
-     , flop:
-        [ { player: 'Attila406', type: 'bet', amount: 2 }
-        , { player: 'FRENCHJS88', type: 'call', amount: 2 } ]
-     , turn:
-        [ { player: 'Attila406', type: 'bet', amount: 3 }
-        , { player: 'FRENCHJS88', type: 'call', amount: 3 } ]
-     , river:
-        [ { player: 'Attila406', type: 'check' }
-        , { player: 'FRENCHJS88', type: 'bet', amount: 2 }
-        , { player: 'Attila406', type: 'fold' } ]
-     , showdown: [ { player: 'FRENCHJS88', type: 'collect', amount: 11.88 } ]
-     , summary: [ { type: 'pot', single: true, amount: 11.88 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 67.2 }
-        , { seatno: 5, player: 'StoplossNo', chips: 39.98 }
-        , { seatno: 8, player: 'Attila406', chips: 104.29 }
-        , { seatno: 10, player: 'danikeen', chips: 54.41 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 6
-        , sec: 1
-        , hero: null
-        , handid: '7973253287'
-        , gameno: '7973253287'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 5 }
-     , board: {}
-     , posts:
-        [ { player: 'Attila406', type: 'sb', amount: 0.5 }
-        , { player: 'danikeen', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'StoplossNo', type: 'collect', amount: 2.5 } ]
-     , summary: [ { type: 'pot', single: true, amount: 2.5 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 67.2 }
-        , { seatno: 5, player: 'StoplossNo', chips: 41.48 }
-        , { seatno: 8, player: 'Attila406', chips: 103.79 }
-        , { seatno: 10, player: 'danikeen', chips: 53.41 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 6
-        , sec: 16
-        , hero: null
-        , handid: '7973253342'
-        , gameno: '7973253342'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 8 }
-     , board:
-        { card1: '7c', card2: '9d', card3: '7h', card4: 'Jc', card5: 'Kh' }
-     , posts:
-        [ { player: 'danikeen', type: 'sb', amount: 0.5 }
-        , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'raise', amount: 2 }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'call', amount: 1 } ]
-     , flop:
-        [ { player: 'FRENCHJS88', type: 'check' }
-        , { player: 'Attila406', type: 'bet', amount: 2 }
-        , { player: 'FRENCHJS88', type: 'call', amount: 2 } ]
-     , turn:
-        [ { player: 'FRENCHJS88', type: 'check' }
-        , { player: 'Attila406', type: 'bet', amount: 4 }
-        , { player: 'FRENCHJS88', type: 'call', amount: 4 } ]
-     , river:
-        [ { player: 'FRENCHJS88', type: 'bet', amount: 6 }
-        , { player: 'Attila406', type: 'fold' } ]
-     , showdown: [ { player: 'FRENCHJS88', type: 'collect', amount: 15.68 } ]
-     , summary: [ { type: 'pot', single: true, amount: 15.68 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 74.88 }
-        , { seatno: 5, player: 'StoplossNo', chips: 41.48 }
-        , { seatno: 8, player: 'Attila406', chips: 95.79 }
-        , { seatno: 10, player: 'danikeen', chips: 52.91 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 7
-        , sec: 3
-        , hero: null
-        , handid: '7973253582'
-        , gameno: '7973253582'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 10 }
-     , board: { card1: 'Th', card2: 'Qh', card3: '5h' }
-     , posts:
-        [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
-        , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'call', amount: 0.5 }
-        , { player: 'StoplossNo', type: 'check' } ]
-     , flop:
-        [ { player: 'FRENCHJS88', type: 'bet', amount: 1 }
-        , { player: 'StoplossNo', type: 'fold' } ]
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'FRENCHJS88', type: 'collect', amount: 1.9 } ]
-     , summary: [ { type: 'pot', single: true, amount: 1.9 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 75.78 }
-        , { seatno: 5, player: 'StoplossNo', chips: 40.48 }
-        , { seatno: 8, player: 'Attila406', chips: 95.79 }
-        , { seatno: 10, player: 'danikeen', chips: 52.91 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 7
-        , sec: 29
-        , hero: null
-        , handid: '7973253688'
-        , gameno: '7973253688'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 1 }
-     , board: {}
-     , posts:
-        [ { player: 'StoplossNo', type: 'sb', amount: 0.5 }
-        , { player: 'Attila406', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'Attila406', type: 'collect', amount: 1 } ]
-     , summary: [ { type: 'pot', single: true, amount: 1 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 75.78 }
-        , { seatno: 5, player: 'StoplossNo', chips: 39.98 }
-        , { seatno: 8, player: 'Attila406', chips: 96.29 }
-        , { seatno: 10, player: 'danikeen', chips: 52.91 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 7
-        , sec: 44
-        , hero: null
-        , handid: '7973253867'
-        , gameno: '7973253867'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 5 }
-     , board: {}
-     , posts:
-        [ { player: 'Attila406', type: 'sb', amount: 0.5 }
-        , { player: 'danikeen', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'raise', amount: 8 }
-        , { player: 'StoplossNo', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'danikeen', type: 'collect', amount: 5.5 } ]
-     , summary: [ { type: 'pot', single: true, amount: 5.5 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 75.78 }
-        , { seatno: 5, player: 'StoplossNo', chips: 37.48 }
-        , { seatno: 8, player: 'Attila406', chips: 95.79 }
-        , { seatno: 10, player: 'danikeen', chips: 55.91 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 8
-        , sec: 13
-        , hero: null
-        , handid: '7973253975'
-        , gameno: '7973253975'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 8 }
-     , board:
-        { card1: '9c', card2: '9s', card3: '2s', card4: '4s', card5: '4h' }
-     , posts:
-        [ { player: 'danikeen', type: 'sb', amount: 0.5 }
-        , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'raise', amount: 2 }
-        , { player: 'danikeen', type: 'call', amount: 1.5 }
-        , { player: 'FRENCHJS88', type: 'call', amount: 1 } ]
-     , flop:
-        [ { player: 'danikeen', type: 'check' }
-        , { player: 'FRENCHJS88', type: 'check' }
-        , { player: 'Attila406', type: 'bet', amount: 2 }
-        , { player: 'danikeen', type: 'call', amount: 2 }
-        , { player: 'FRENCHJS88', type: 'fold' } ]
-     , turn:
-        [ { player: 'danikeen', type: 'check' }
-        , { player: 'Attila406', type: 'check' } ]
-     , river:
-        [ { player: 'danikeen', type: 'bet', amount: 10 }
-        , { player: 'Attila406', type: 'call', amount: 10 } ]
-     , showdown:
-        [ { player: 'Attila406', type: 'collect', amount: 28.5 }
-        , { player: 'Attila406', type: 'show', card1: 'Ad', card2: '4d' }
-        , { player: 'danikeen', type: 'show', card1: '7c', card2: '6c' } ]
-     , summary: [ { type: 'pot', single: true, amount: 28.5 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 73.78 }
-        , { seatno: 5, player: 'StoplossNo', chips: 37.48 }
-        , { seatno: 8, player: 'Attila406', chips: 110.29 }
-        , { seatno: 10, player: 'danikeen', chips: 50 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 9
-        , sec: 4
-        , hero: null
-        , handid: '7973254158'
-        , gameno: '7973254158'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 10 }
-     , board: {}
-     , posts:
-        [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
-        , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'call', amount: 0.5 }
-        , { player: 'StoplossNo', type: 'raise', amount: 4 }
-        , { player: 'FRENCHJS88', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'StoplossNo', type: 'collect', amount: 2 } ]
-     , summary: [ { type: 'pot', single: true, amount: 2 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 72.78 }
-        , { seatno: 5, player: 'StoplossNo', chips: 38.48 }
-        , { seatno: 8, player: 'Attila406', chips: 110.29 }
-        , { seatno: 10, player: 'danikeen', chips: 50 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 9
-        , sec: 25
-        , hero: null
-        , handid: '7973254224'
-        , gameno: '7973254224'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 1 }
-     , board: {}
-     , posts:
-        [ { player: 'StoplossNo', type: 'sb', amount: 0.5 }
-        , { player: 'Attila406', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'Attila406', type: 'collect', amount: 1 } ]
-     , summary: [ { type: 'pot', single: true, amount: 1 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 72.78 }
-        , { seatno: 5, player: 'StoplossNo', chips: 37.98 }
-        , { seatno: 8, player: 'Attila406', chips: 110.79 }
-        , { seatno: 10, player: 'danikeen', chips: 50 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 9
-        , sec: 36
-        , hero: null
-        , handid: '7973254269'
-        , gameno: '7973254269'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 5 }
-     , board: { card1: '5s', card2: 'Th', card3: '6s', card4: 'Ks' }
-     , posts:
-        [ { player: 'Attila406', type: 'sb', amount: 0.5 }
-        , { player: 'danikeen', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
-        , { player: 'Attila406', type: 'call', amount: 2 }
-        , { player: 'danikeen', type: 'call', amount: 1.5 } ]
-     , flop:
-        [ { player: 'Attila406', type: 'check' }
-        , { player: 'danikeen', type: 'check' }
-        , { player: 'StoplossNo', type: 'check' } ]
-     , turn:
-        [ { player: 'Attila406', type: 'check' }
-        , { player: 'danikeen', type: 'check' }
-        , { player: 'StoplossNo', type: 'bet', amount: 4.5 }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' } ]
-     , river: []
-     , showdown: [ { player: 'StoplossNo', type: 'collect', amount: 7.13 } ]
-     , summary: [ { type: 'pot', single: true, amount: 7.13 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 72.78 }
-        , { seatno: 5, player: 'StoplossNo', chips: 42.61 }
-        , { seatno: 8, player: 'Attila406', chips: 108.29 }
-        , { seatno: 10, player: 'danikeen', chips: 50 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 10
-        , sec: 30
-        , hero: null
-        , handid: '7973254464'
-        , gameno: '7973254464'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 8 }
-     , board: {}
-     , posts:
-        [ { player: 'danikeen', type: 'sb', amount: 0.5 }
-        , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'raise', amount: 3 }
-        , { player: 'FRENCHJS88', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'danikeen', type: 'collect', amount: 2 } ]
-     , summary: [ { type: 'pot', single: true, amount: 2 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 71.78 }
-        , { seatno: 5, player: 'StoplossNo', chips: 42.61 }
-        , { seatno: 8, player: 'Attila406', chips: 108.29 }
-        , { seatno: 10, player: 'danikeen', chips: 51 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 10
-        , sec: 43
-        , hero: null
-        , handid: '7973254503'
-        , gameno: '7973254503'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 10 }
-     , board: {}
-     , posts:
-        [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
-        , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'StoplossNo', type: 'collect', amount: 1 } ]
-     , summary: [ { type: 'pot', single: true, amount: 1 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 71.28 }
-        , { seatno: 5, player: 'StoplossNo', chips: 43.11 }
-        , { seatno: 8, player: 'Attila406', chips: 108.29 }
-        , { seatno: 10, player: 'danikeen', chips: 51 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 10
-        , sec: 51
-        , hero: null
-        , handid: '7973254863'
-        , gameno: '7973254863'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 1 }
-     , board: { card1: '2s', card2: '4c', card3: 'Kc', card4: '7s' }
-     , posts:
-        [ { player: 'StoplossNo', type: 'sb', amount: 0.5 }
-        , { player: 'Attila406', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'danikeen', type: 'raise', amount: 3 }
-        , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'call', amount: 2 } ]
-     , flop:
-        [ { player: 'Attila406', type: 'check' }
-        , { player: 'danikeen', type: 'bet', amount: 2.6 }
-        , { player: 'Attila406', type: 'call', amount: 2.6 } ]
-     , turn:
-        [ { player: 'Attila406', type: 'check' }
-        , { player: 'danikeen', type: 'bet', amount: 5.85 }
-        , { player: 'Attila406', type: 'fold' } ]
-     , river: []
-     , showdown: [ { player: 'danikeen', type: 'collect', amount: 11.12 } ]
-     , summary: [ { type: 'pot', single: true, amount: 11.12 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 71.28 }
-        , { seatno: 5, player: 'StoplossNo', chips: 42.61 }
-        , { seatno: 8, player: 'Attila406', chips: 102.69 }
-        , { seatno: 10, player: 'danikeen', chips: 56.52 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 11
-        , sec: 29
-        , hero: null
-        , handid: '7973255022'
-        , gameno: '7973255022'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 5 }
-     , board: { card1: 'Qh', card2: 'Jd', card3: 'Jh' }
-     , posts:
-        [ { player: 'Attila406', type: 'sb', amount: 0.5 }
-        , { player: 'danikeen', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'raise', amount: 2 }
-        , { player: 'danikeen', type: 'call', amount: 1 } ]
-     , flop:
-        [ { player: 'Attila406', type: 'bet', amount: 2 }
-        , { player: 'danikeen', type: 'fold' } ]
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'Attila406', type: 'collect', amount: 3.8 } ]
-     , summary: [ { type: 'pot', single: true, amount: 3.8 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 71.28 }
-        , { seatno: 5, player: 'StoplossNo', chips: 42.61 }
-        , { seatno: 8, player: 'Attila406', chips: 104.49 }
-        , { seatno: 10, player: 'danikeen', chips: 54.52 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 11
-        , sec: 50
-        , hero: null
-        , handid: '7973255094'
-        , gameno: '7973255094'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 8 }
-     , board:
-        { card1: 'Js', card2: '2h', card3: 'Qd', card4: 'Kc', card5: '7d' }
-     , posts:
-        [ { player: 'danikeen', type: 'sb', amount: 0.5 }
-        , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'StoplossNo', type: 'raise', amount: 2.5 }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'call', amount: 1.5 } ]
-     , flop:
-        [ { player: 'FRENCHJS88', type: 'check' }
-        , { player: 'StoplossNo', type: 'check' } ]
-     , turn:
-        [ { player: 'FRENCHJS88', type: 'check' }
-        , { player: 'StoplossNo', type: 'check' } ]
-     , river:
-        [ { player: 'FRENCHJS88', type: 'check' }
-        , { player: 'StoplossNo', type: 'check' } ]
-     , showdown:
-        [ { player: 'StoplossNo', type: 'collect', amount: 5.23 }
-        , { player: 'StoplossNo', type: 'show', card1: '4h', card2: '4s' } ]
-     , summary: [ { type: 'pot', single: true, amount: 5.23 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 68.78 }
-        , { seatno: 5, player: 'StoplossNo', chips: 45.34 }
-        , { seatno: 8, player: 'Attila406', chips: 104.49 }
-        , { seatno: 10, player: 'danikeen', chips: 54.02 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 12
-        , sec: 22
-        , hero: null
-        , handid: '7973255214'
-        , gameno: '7973255214'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 10 }
-     , board: { card1: '5s', card2: '9c', card3: '7c' }
-     , posts:
-        [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
-        , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'Attila406', type: 'raise', amount: 2 }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'raise', amount: 7 }
-        , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'call', amount: 5 } ]
-     , flop:
-        [ { player: 'FRENCHJS88', type: 'bet', amount: 61.78 }
-        , { player: 'Attila406', type: 'fold' } ]
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'FRENCHJS88', type: 'collect', amount: 14.25 } ]
-     , summary: [ { type: 'pot', single: true, amount: 14.25 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 76.03 }
-        , { seatno: 5, player: 'StoplossNo', chips: 44.34 }
-        , { seatno: 8, player: 'Attila406', chips: 97.49 }
-        , { seatno: 10, player: 'danikeen', chips: 54.02 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 12
-        , sec: 56
-        , hero: null
-        , handid: '7973255328'
-        , gameno: '7973255328'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 1 }
-     , board:
-        { card1: '5h', card2: '3s', card3: '7c', card4: 'Jc', card5: 'Qd' }
-     , posts:
-        [ { player: 'StoplossNo', type: 'sb', amount: 0.5 }
-        , { player: 'Attila406', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'danikeen', type: 'raise', amount: 3 }
-        , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'raise', amount: 12 }
-        , { player: 'danikeen', type: 'call', amount: 9 } ]
-     , flop:
-        [ { player: 'Attila406', type: 'bet', amount: 17.15 }
-        , { player: 'danikeen', type: 'raise', amount: 42 }
-        , { player: 'Attila406', type: 'call', amount: 24.85 } ]
-     , turn:
-        [ { player: 'Attila406', type: 'check' }
-        , { player: 'danikeen', type: 'allin', amount: 0.02, raiseTo: 0.02 }
-        , { player: 'Attila406', type: 'call', amount: 0.02 } ]
-     , river: []
-     , showdown:
-        [ { player: 'danikeen', type: 'collect', amount: 104.54 }
-        , { player: 'danikeen', type: 'show', card1: 'Kd', card2: 'Kh' }
-        , { player: 'Attila406', type: 'show', card1: '9s', card2: 'Kc' } ]
-     , summary: [ { type: 'pot', single: true, amount: 104.54 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 76.03 }
-        , { seatno: 5, player: 'StoplossNo', chips: 43.84 }
-        , { seatno: 8, player: 'Attila406', chips: 50 }
-        , { seatno: 10, player: 'danikeen', chips: 104.54 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 13
-        , sec: 43
-        , hero: null
-        , handid: '7973257541'
-        , gameno: '7973257541'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 5 }
-     , board: {}
-     , posts:
-        [ { player: 'Attila406', type: 'sb', amount: 0.5 }
-        , { player: 'danikeen', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'StoplossNo', type: 'collect', amount: 2.5 } ]
-     , summary: [ { type: 'pot', single: true, amount: 2.5 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 76.03 }
-        , { seatno: 5, player: 'StoplossNo', chips: 45.34 }
-        , { seatno: 8, player: 'Attila406', chips: 50 }
-        , { seatno: 10, player: 'danikeen', chips: 103.54 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 13
-        , sec: 55
-        , hero: null
-        , handid: '7973257590'
-        , gameno: '7973257590'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 8 }
-     , board: {}
-     , posts:
-        [ { player: 'danikeen', type: 'sb', amount: 0.5 }
-        , { player: 'FRENCHJS88', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'raise', amount: 2.5 }
-        , { player: 'FRENCHJS88', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'danikeen', type: 'collect', amount: 2 } ]
-     , summary: [ { type: 'pot', single: true, amount: 2 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 75.03 }
-        , { seatno: 5, player: 'StoplossNo', chips: 45.34 }
-        , { seatno: 8, player: 'Attila406', chips: 50 }
-        , { seatno: 10, player: 'danikeen', chips: 104.54 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 14
-        , sec: 8
-        , hero: null
-        , handid: '7973258621'
-        , gameno: '7973258621'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 10 }
-     , board:
-        { card1: '6c', card2: 'Ts', card3: 'Jh', card4: '8d', card5: '2h' }
-     , posts:
-        [ { player: 'FRENCHJS88', type: 'sb', amount: 0.5 }
-        , { player: 'StoplossNo', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'Attila406', type: 'raise', amount: 2 }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'call', amount: 1.5 }
-        , { player: 'StoplossNo', type: 'call', amount: 1 } ]
-     , flop:
-        [ { player: 'FRENCHJS88', type: 'check' }
-        , { player: 'StoplossNo', type: 'check' }
-        , { player: 'Attila406', type: 'bet', amount: 3 }
-        , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 10 }
-        , { player: 'Attila406', type: 'call', amount: 7 } ]
-     , turn:
-        [ { player: 'StoplossNo', type: 'bet', amount: 33.34 }
-        , { player: 'Attila406', type: 'call', amount: 33.34 } ]
-     , river: []
-     , showdown:
-        [ { player: 'StoplossNo', type: 'collect', amount: 88.68 }
-        , { player: 'Attila406', type: 'show', card1: 'As', card2: 'Ah' }
-        , { player: 'StoplossNo', type: 'show', card1: '6d', card2: 'Jd' } ]
-     , summary: [ { type: 'pot', single: true, amount: 88.68 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 73.03 }
-        , { seatno: 5, player: 'StoplossNo', chips: 88.68 }
-        , { seatno: 8, player: 'Attila406', chips: 50 }
-        , { seatno: 10, player: 'danikeen', chips: 104.54 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 15
-        , sec: 10
-        , hero: null
-        , handid: '7973259866'
-        , gameno: '7973259866'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 1 }
-     , board: {}
-     , posts:
-        [ { player: 'StoplossNo', type: 'sb', amount: 0.5 }
-        , { player: 'Attila406', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'danikeen', type: 'fold' }
-        , { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'raise', amount: 2.5 }
-        , { player: 'Attila406', type: 'raise', amount: 7 }
-        , { player: 'StoplossNo', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'Attila406', type: 'collect', amount: 5 } ]
-     , summary: [ { type: 'pot', single: true, amount: 5 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 1, player: 'FRENCHJS88', chips: 73.03 }
-        , { seatno: 5, player: 'StoplossNo', chips: 86.18 }
-        , { seatno: 8, player: 'Attila406', chips: 52.5 }
-        , { seatno: 10, player: 'danikeen', chips: 104.54 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 15
-        , sec: 30
-        , hero: null
-        , handid: '7973259936'
-        , gameno: '7973259936'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 5 }
-     , board:
-        { card1: 'Td', card2: '7c', card3: '7d', card4: '8c', card5: '6c' }
-     , posts:
-        [ { player: 'Attila406', type: 'sb', amount: 0.5 }
-        , { player: 'danikeen', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'FRENCHJS88', type: 'fold' }
-        , { player: 'StoplossNo', type: 'fold' }
-        , { player: 'Attila406', type: 'raise', amount: 2 }
-        , { player: 'danikeen', type: 'call', amount: 1 } ]
-     , flop:
-        [ { player: 'Attila406', type: 'bet', amount: 3 }
-        , { player: 'danikeen', type: 'call', amount: 3 } ]
-     , turn:
-        [ { player: 'Attila406', type: 'bet', amount: 5 }
-        , { player: 'danikeen', type: 'call', amount: 5 } ]
-     , river:
-        [ { player: 'Attila406', type: 'bet', amount: 18 }
-        , { player: 'danikeen', type: 'fold' } ]
-     , showdown: [ { player: 'Attila406', type: 'collect', amount: 19 } ]
-     , summary: [ { type: 'pot', single: true, amount: 19 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 3, player: 'Cantonius', chips: 50 }
-        , { seatno: 5, player: 'StoplossNo', chips: 86.18 }
-        , { seatno: 8, player: 'Attila406', chips: 61.5 }
-        , { seatno: 10, player: 'danikeen', chips: 94.54 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 16
-        , sec: 35
-        , hero: null
-        , handid: '7973261477'
-        , gameno: '7973261477'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 8 }
-     , board: {}
-     , posts:
-        [ { player: 'danikeen', type: 'sb', amount: 0.5 }
-        , { player: 'Cantonius', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'StoplossNo', type: 'raise', amount: 2.5 }
-        , { player: 'Attila406', type: 'fold' }
-        , { player: 'danikeen', type: 'fold' }
-        , { player: 'Cantonius', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'StoplossNo', type: 'collect', amount: 2.5 } ]
-     , summary: [ { type: 'pot', single: true, amount: 2.5 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 3, player: 'Cantonius', chips: 50 }
-        , { seatno: 8, player: 'Attila406', chips: 61.5 }
-        , { seatno: 10, player: 'danikeen', chips: 94.04 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 16
-        , sec: 51
-        , hero: null
-        , handid: '7973261746'
-        , gameno: '7973261746'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 10 }
-     , board: {}
-     , posts:
-        [ { player: 'Cantonius', type: 'sb', amount: 0.5 }
-        , { player: 'Attila406', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'danikeen', type: 'fold' }
-        , { player: 'Cantonius', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'Attila406', type: 'collect', amount: 1 } ]
-     , summary: [ { type: 'pot', single: true, amount: 1 } ]
-     , hero: null
-     , holecards: null }
-    , { seats:
-        [ { seatno: 3, player: 'Cantonius', chips: 50 }
-        , { seatno: 8, player: 'Attila406', chips: 62 }
-        , { seatno: 10, player: 'danikeen', chips: 94.04 } ]
-     , info:
-        { room: 'ipoker'
-        , timezone: null
-        , pokertype: 'holdem'
-        , limit: 'nolimit'
-        , currency: '£'
-        , donation: null
-        , rake: null
-        , buyin: null
-        , sb: 0.5
-        , bb: 1
-        , ante: 0
-        , year: 2018
-        , month: 6
-        , day: 20
-        , hour: 17
-        , min: 17
-        , sec: 3
-        , hero: null
-        , handid: '7973261800'
-        , gameno: '7973261800'
-        , gametype: 'cash' }
-     , table:
-        { tablename: 'Ebenthal'
-        , tableno: 901952806
-        , maxseats: 10
-        , button: 3 }
-     , board: {}
-     , posts:
-        [ { player: 'Attila406', type: 'sb', amount: 0.5 }
-        , { player: 'danikeen', type: 'bb', amount: 1 } ]
-     , preflop:
-        [ { player: 'Cantonius', type: 'fold' }
-        , { player: 'Attila406', type: 'fold' } ]
-     , flop: []
-     , turn: []
-     , river: []
-     , showdown: [ { player: 'danikeen', type: 'collect', amount: 1 } ]
-     , summary: [ { type: 'pot', single: true, amount: 1 } ]
      , hero: null
      , holecards: null } ])
   t.end()

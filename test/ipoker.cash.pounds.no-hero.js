@@ -42,7 +42,8 @@ test(`ipoker: ${file}`, function(t) {
       , tableno: 817196375
       , maxseats: 6
       , button: 6 }
-    , board: { card1: '3d', card2: '9c', card3: '3h', card4: 'Jh', card5: '4s' }
+    , board:
+      { card1: '3d', card2: '9c', card3: '3h', card4: 'Jh', card5: '4s' }
     , posts:
       [ { player: 'WWR141388412', type: 'ante', amount: 0.02 }
       , { player: 'keepfishing68', type: 'ante', amount: 0.02 }
@@ -62,7 +63,8 @@ test(`ipoker: ${file}`, function(t) {
     , river:
       [ { player: 'WWR141388412', type: 'bet', amount: 0.1 }
       , { player: 'keepfishing68', type: 'fold' } ]
-    , showdown: [ { player: 'WWR141388412', type: 'collect', amount: 0.35 } ]
+    , showdown:
+      [ { player: 'WWR141388412', type: 'collect', amount: 0.35 } ]
     , summary: [ { type: 'pot', single: true, amount: 0.35 } ]
     , hero: null
     , holecards: null })

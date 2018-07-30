@@ -46,7 +46,8 @@ test(`ipoker: ${file}`, function(t) {
         , tableno: 486280776
         , maxseats: 10
         , button: 10 }
-     , board: { card1: '9d', card2: 'Tc', card3: 'Qh', card4: '5d', card5: '5h' }
+     , board:
+        { card1: '9d', card2: 'Tc', card3: 'Qh', card4: '5d', card5: '5h' }
      , posts:
         [ { player: 'Player0', type: 'sb', amount: 0.01 }
         , { player: 'Player1', type: 'bb', amount: 0.02 } ]
@@ -129,7 +130,7 @@ test(`ipoker: ${file}`, function(t) {
         , { player: 'Player5', type: 'fold' }
         , { player: 'Player6', type: 'fold' }
         , { player: 'Player0', type: 'call', amount: 0.02 }
-        , { player: 'Player1', type: 'raise', amount: 0.04 }
+        , { player: 'Player1', type: 'raise', amount: 0.02, raiseTo: 0.04 }
         , { player: 'Player2', type: 'fold' }
         , { player: 'Hero', type: 'fold' }
         , { player: 'Player0', type: 'call', amount: 0.02 } ]
@@ -183,7 +184,8 @@ test(`ipoker: ${file}`, function(t) {
         , tableno: 486280776
         , maxseats: 10
         , button: 2 }
-     , board: { card1: '4h', card2: '6c', card3: '6s', card4: '8s', card5: '2c' }
+     , board:
+        { card1: '4h', card2: '6c', card3: '6s', card4: '8s', card5: '2c' }
      , posts:
         [ { player: 'Player2', type: 'sb', amount: 0.01 }
         , { player: 'Player3', type: 'bb', amount: 0.02 } ]

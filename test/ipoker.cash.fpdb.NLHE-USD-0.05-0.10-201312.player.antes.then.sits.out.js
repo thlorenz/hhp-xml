@@ -45,7 +45,8 @@ test(`ipoker: ${file}`, function(t) {
         , tableno: 766490881
         , maxseats: 10
         , button: 10 }
-     , board: { card1: 'Qc', card2: 'Tc', card3: 'Qd', card4: '5d', card5: '2s' }
+     , board:
+        { card1: 'Qc', card2: 'Tc', card3: 'Qd', card4: '5d', card5: '2s' }
      , posts:
         [ { player: 'Player2', type: 'ante', amount: 0.02 }
         , { player: 'Player3', type: 'ante', amount: 0.02 }
@@ -54,7 +55,7 @@ test(`ipoker: ${file}`, function(t) {
         , { player: 'Player2', type: 'sb', amount: 0.05 }
         , { player: 'Hero', type: 'bb', amount: 0.1 } ]
      , preflop:
-        [ { player: 'Player3', type: 'sitout', amount: 0, raiseTo: 0 }
+        [ { player: 'Player3', type: 'sitout', amount: 0 }
         , { player: 'bf411509', type: 'call', amount: 0.1 }
         , { player: 'Player2', type: 'fold' }
         , { player: 'Hero', type: 'check' } ]
@@ -74,6 +75,5 @@ test(`ipoker: ${file}`, function(t) {
      , summary: [ { type: 'pot', single: true, amount: 0.31 } ]
      , hero: 'Hero'
      , holecards: { card1: 'Jh', card2: '4d' } } ])
-
   t.end()
 })

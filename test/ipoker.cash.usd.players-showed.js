@@ -49,7 +49,8 @@ test(`ipoker: ${file}`, function(t) {
       , tableno: 98641631
       , maxseats: 10
       , button: 6 }
-    , board: { card1: 'Kd', card2: '8s', card3: '2h', card4: '2d', card5: '6d' }
+    , board:
+      { card1: 'Kd', card2: '8s', card3: '2h', card4: '2d', card5: '6d' }
     , posts:
       [ { player: 'Player9', type: 'sb', amount: 0.1 }
       , { player: 'Player6', type: 'bb', amount: 0.2 }

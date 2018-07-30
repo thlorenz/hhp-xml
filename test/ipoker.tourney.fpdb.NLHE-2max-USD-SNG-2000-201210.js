@@ -46,8 +46,8 @@ test(`ipoker: ${file}`, function(t) {
       [ { player: 'Player0', type: 'sb', amount: 10 }
       , { player: 'Hero', type: 'bb', amount: 20 } ]
     , preflop:
-      [ { player: 'Player0', type: 'raise', amount: 40 }
-      , { player: 'Hero', type: 'raise', amount: 120 }
+      [ { player: 'Player0', type: 'raise', amount: 40, raiseTo: 40 }
+      , { player: 'Hero', type: 'raise', amount: 80, raiseTo: 120 }
       , { player: 'Player0', type: 'fold' } ]
     , flop: []
     , turn: []

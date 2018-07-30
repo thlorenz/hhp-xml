@@ -130,7 +130,7 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'HAZERA586', type: 'sb', amount: 3 }
         , { player: 'hulahHULAH', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'HAZERA586', type: 'raise', amount: 12 }
+        [ { player: 'HAZERA586', type: 'raise', amount: 12, raiseTo: 12 }
         , { player: 'hulahHULAH', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -174,8 +174,8 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'hulahHULAH', type: 'sb', amount: 3 }
         , { player: 'HAZERA586', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'hulahHULAH', type: 'raise', amount: 13 }
-        , { player: 'HAZERA586', type: 'raise', amount: 122 }
+        [ { player: 'hulahHULAH', type: 'raise', amount: 13, raiseTo: 13 }
+        , { player: 'HAZERA586', type: 'raise', amount: 109, raiseTo: 122 }
         , { player: 'hulahHULAH', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -267,21 +267,21 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'hulahHULAH', type: 'sb', amount: 3 }
         , { player: 'HAZERA586', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'hulahHULAH', type: 'raise', amount: 12 }
-        , { player: 'HAZERA586', type: 'raise', amount: 18 }
+        [ { player: 'hulahHULAH', type: 'raise', amount: 12, raiseTo: 12 }
+        , { player: 'HAZERA586', type: 'raise', amount: 6, raiseTo: 18 }
         , { player: 'hulahHULAH', type: 'call', amount: 6 } ]
      , flop:
         [ { player: 'HAZERA586', type: 'bet', amount: 18 }
-        , { player: 'hulahHULAH', type: 'raise', amount: 66 }
-        , { player: 'HAZERA586', type: 'raise', amount: 114 }
+        , { player: 'hulahHULAH', type: 'raise', amount: 48, raiseTo: 66 }
+        , { player: 'HAZERA586', type: 'raise', amount: 48, raiseTo: 114 }
         , { player: 'hulahHULAH', type: 'call', amount: 48 } ]
      , turn:
         [ { player: 'HAZERA586', type: 'bet', amount: 6 }
-        , { player: 'hulahHULAH', type: 'raise', amount: 635.58 }
-        , { player: 'HAZERA586'
-          , type: 'allin'
-          , amount: 480.4
-          , raiseTo: 486.4 } ]
+        , { player: 'hulahHULAH'
+          , type: 'raise'
+          , amount: 629.58
+          , raiseTo: 635.58 }
+        , { player: 'HAZERA586', type: 'call', amount: 486.4, allin: true } ]
      , river: []
      , showdown:
         [ { player: 'hulahHULAH', type: 'collect', amount: 1247.8 }
@@ -325,7 +325,10 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'LuckyYellowDog', type: 'sb', amount: 3 }
         , { player: 'Pipitr', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'LuckyYellowDog', type: 'raise', amount: 12 }
+        [ { player: 'LuckyYellowDog'
+          , type: 'raise'
+          , amount: 12
+          , raiseTo: 12 }
         , { player: 'Pipitr', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -371,7 +374,7 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'Pipitr', type: 'sb', amount: 3 }
         , { player: 'LuckyYellowDog', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'Pipitr', type: 'raise', amount: 15 }
+        [ { player: 'Pipitr', type: 'raise', amount: 15, raiseTo: 15 }
         , { player: 'LuckyYellowDog', type: 'call', amount: 9 } ]
      , flop:
         [ { player: 'LuckyYellowDog', type: 'check' }
@@ -428,7 +431,10 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'LuckyYellowDog', type: 'sb', amount: 3 }
         , { player: 'bob9798', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'LuckyYellowDog', type: 'raise', amount: 12 }
+        [ { player: 'LuckyYellowDog'
+          , type: 'raise'
+          , amount: 12
+          , raiseTo: 12 }
         , { player: 'bob9798', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -473,7 +479,7 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'bob9798', type: 'sb', amount: 3 }
         , { player: 'LuckyYellowDog', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'bob9798', type: 'raise', amount: 15 }
+        [ { player: 'bob9798', type: 'raise', amount: 15, raiseTo: 15 }
         , { player: 'LuckyYellowDog', type: 'call', amount: 9 } ]
      , flop:
         [ { player: 'LuckyYellowDog', type: 'check' }
@@ -520,7 +526,10 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'LuckyYellowDog', type: 'sb', amount: 3 }
         , { player: 'bob9798', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'LuckyYellowDog', type: 'raise', amount: 12 }
+        [ { player: 'LuckyYellowDog'
+          , type: 'raise'
+          , amount: 12
+          , raiseTo: 12 }
         , { player: 'bob9798', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -607,8 +616,11 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'LuckyYellowDog', type: 'sb', amount: 3 }
         , { player: 'bob9798', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'LuckyYellowDog', type: 'raise', amount: 12 }
-        , { player: 'bob9798', type: 'raise', amount: 42 }
+        [ { player: 'LuckyYellowDog'
+          , type: 'raise'
+          , amount: 12
+          , raiseTo: 12 }
+        , { player: 'bob9798', type: 'raise', amount: 30, raiseTo: 42 }
         , { player: 'LuckyYellowDog', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -694,8 +706,8 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'RIVERFOLD92', type: 'sb', amount: 3 }
         , { player: 'SicoXXI', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'RIVERFOLD92', type: 'raise', amount: 12 }
-        , { player: 'SicoXXI', type: 'raise', amount: 42 }
+        [ { player: 'RIVERFOLD92', type: 'raise', amount: 12, raiseTo: 12 }
+        , { player: 'SicoXXI', type: 'raise', amount: 30, raiseTo: 42 }
         , { player: 'RIVERFOLD92', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -782,7 +794,7 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'SicoXXI', type: 'sb', amount: 3 }
         , { player: 'alittl3ch3ck13', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'SicoXXI', type: 'raise', amount: 12 }
+        [ { player: 'SicoXXI', type: 'raise', amount: 12, raiseTo: 12 }
         , { player: 'alittl3ch3ck13', type: 'call', amount: 6 } ]
      , flop:
         [ { player: 'alittl3ch3ck13', type: 'check' }
@@ -839,8 +851,8 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'MRWOOFY', type: 'sb', amount: 3 }
         , { player: 'RIVERFOLD92', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'MRWOOFY', type: 'raise', amount: 15 }
-        , { player: 'RIVERFOLD92', type: 'raise', amount: 54 }
+        [ { player: 'MRWOOFY', type: 'raise', amount: 15, raiseTo: 15 }
+        , { player: 'RIVERFOLD92', type: 'raise', amount: 39, raiseTo: 54 }
         , { player: 'MRWOOFY', type: 'call', amount: 39 } ]
      , flop:
         [ { player: 'RIVERFOLD92', type: 'bet', amount: 48 }
@@ -893,7 +905,7 @@ test(`ipoker: ${file}`, function(t) {
         [ { player: 'RIVERFOLD92', type: 'sb', amount: 3 }
         , { player: 'MRWOOFY', type: 'bb', amount: 6 } ]
      , preflop:
-        [ { player: 'RIVERFOLD92', type: 'raise', amount: 15 }
+        [ { player: 'RIVERFOLD92', type: 'raise', amount: 15, raiseTo: 15 }
         , { player: 'MRWOOFY', type: 'fold' } ]
      , flop: []
      , turn: []
@@ -902,6 +914,5 @@ test(`ipoker: ${file}`, function(t) {
      , summary: [ { type: 'pot', single: true, amount: 12 } ]
      , hero: null
      , holecards: null } ])
-
   t.end()
 })
